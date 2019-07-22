@@ -53,21 +53,27 @@
           <div class="separate_line_white d-inline-block align-middle"></div>
           <div class="languages d-inline-block align-middle">
             <ul class="m-0 list-unstyled">
-              <li class="active"><a href="#"rel="noopener noreferrer">INDONESIA</a></li>
+              <?php
+                $get = $_GET; $get['lang'] = 'id';
+                ?>
+              <li class="active"><a href="<?php echo $this->createUrl($this->route, $get) ?>"rel="noopener noreferrer">INDONESIA</a></li>
               <li class="separator"></li>
-              <li class="kanan-eng"><a href="#"rel="noopener noreferrer">ENGLISH</a></li>
+               <?php
+                $get = $_GET; $get['lang'] = 'en';
+                ?>
+              <li class="kanan-eng"><a href="<?php echo $this->createUrl($this->route, $get) ?>"rel="noopener noreferrer">ENGLISH</a></li>
             </ul>
           </div>
 
         </div>
         <div class="menu-block-bottom">
           <ul class="list-inline menuuu">
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>">Home</a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>">Tentang Kami</a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/layanan', 'lang'=>Yii::app()->language)); ?>">layanan</a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubinvest', 'lang'=>Yii::app()->language)); ?>">hubungan investor</a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>">karir</a></li>
-            <li class="list-inline-item menu paling-kanan"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubungi', 'lang'=>Yii::app()->language)); ?>">Hubungi Kami</a></li>
+            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Home') ?></a></li>
+            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Tentang Kami') ?></a></li>
+            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/layanan', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'layanan') ?></a></li>
+            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubinvest', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'hubungan investor') ?></a></li>
+            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'karir') ?></a></li>
+            <li class="list-inline-item menu paling-kanan"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubungi', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Hubungi Kami') ?></a></li>
           </ul>
         </div>
       </div>
@@ -100,12 +106,12 @@
         <div class="text-right"> 
           <div class="menu-taffix">
             <ul class="list-inline d-inline">
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>">Home</a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>">Tentang Kami</a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/layanan', 'lang'=>Yii::app()->language)); ?>">layanan</a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubinvest', 'lang'=>Yii::app()->language)); ?>">hubungan investor</a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>">karir</a></li>
-            <li class="list-inline-item menu paling-kanan"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubungi', 'lang'=>Yii::app()->language)); ?>">Hubungi Kami</a></li>
+            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Home') ?></a></li>
+            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Tentang Kami') ?></a></li>
+            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/layanan', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'layanan') ?></a></li>
+            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubinvest', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'hubungan investor') ?></a></li>
+            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'karir') ?></a></li>
+            <li class="list-inline-item menu paling-kanan"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubungi', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Hubungi Kami') ?></a></li>
             </ul>
           </div>
         </div>
@@ -124,17 +130,20 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-    <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>">Home</a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>">Tentang Kami</a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/layanan', 'lang'=>Yii::app()->language)); ?>">layanan</a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubinvest', 'lang'=>Yii::app()->language)); ?>">hubungan investor</a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>">karir</a></li>
-            <li class="list-inline-item menu paling-kanan"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubungi', 'lang'=>Yii::app()->language)); ?>">Hubungi Kami</a></li>  
+    <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Home') ?></a></li>
+    <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Tentang Kami') ?></a></li>
+    <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/layanan', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'layanan') ?></a></li>
+    <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubinvest', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'hubungan investor') ?></a></li>
+    <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'karir') ?></a></li>
+    <li class="list-inline-item menu paling-kanan"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubungi', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Hubungi Kami') ?></a></li>
       <li class="nav-item">
       <?php
       $get = $_GET; $get['lang'] = 'en';
       ?>
       <a href="<?php echo $this->createUrl($this->route, $get) ?>" title="ENG">EN | </a>
+      <?php
+      $get = $_GET; $get['lang'] = 'id';
+      ?>
       <a href="<?php echo $this->createUrl($this->route, $get) ?>" title="Bahasa">ID</a>
       </li>
     </ul>
