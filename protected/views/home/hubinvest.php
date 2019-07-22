@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-md-15">
                 <div class="box-content-dalam">
-                    <div class="image"><img src="<?php echo $this->assetBaseurl; ?>Rectangle 3.png" alt=""></div>
+                    <div class="image"><img class="" src="<?php echo $this->assetBaseurl; ?>hub11.png" alt=""></div>
                     <div class="title">
                         <p>INFORMASI INVESTOR</p>
                     </div>
@@ -33,7 +33,7 @@
             </div>
             <div class="col-md-15">
                 <div class="box-content-dalam">
-                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>Rectangle 3.png" alt=""></div>
+                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>hub12.png" alt=""></div>
                     <div class="title">
                         <p>INFORMASI FINANSIAL</p>
                     </div>
@@ -46,7 +46,7 @@
             </div>
             <div class="col-md-15">
                 <div class="box-content-dalam">
-                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>Rectangle 3.png" alt=""></div>
+                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>hub13.png" alt=""></div>
                     <div class="title">
                         <p>LAPORAN KEUANGAN</p>
                     </div>
@@ -59,7 +59,7 @@
             </div>
             <div class="col-md-15">
                 <div class="box-content-dalam">
-                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>Rectangle 3.png" alt=""></div>
+                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>hub14.png" alt=""></div>
                     <div class="title">
                         <p>TATA KELOLA PERUSAHAAN</p>
                     </div>

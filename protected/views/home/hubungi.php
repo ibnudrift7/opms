@@ -1,4 +1,4 @@
-<section class="cover-insides">
+<section class="cover-insides hubungi">
     <div class="begrond">
         <div class="prelative container">
                 <div class="teks">
