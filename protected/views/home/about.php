@@ -36,8 +36,8 @@
             </div>
             <div class="col-md-30">
                 <div class="box-content-right">
-                    <div class="image">                        <img src="<?php echo $this->assetBaseurl; ?>Rectangle 1.png" alt="" >
-</div>
+                    <div class="image">                        <img src="<?php echo $this->assetBaseurl; ?>Rectangle1.png" alt="" >
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
             <div class="col-md-30">
                 <div class="box-content-left">
                     <div class="image">
-                    <img src="<?php echo $this->assetBaseurl; ?>Rectangle 2.png" alt="" <div class="nama">                    </div>
+                    <img src="<?php echo $this->assetBaseurl; ?>Rectangle-2.png" alt="">                 </div>
                 </div>
             </div>
             <div class="col-md-30">

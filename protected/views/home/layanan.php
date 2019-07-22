@@ -1,4 +1,4 @@
-<section class="cover-insides">
+<section class="cover-insides layanan">
     <div class="begrond">
         <div class="prelative container">
                 <div class="teks">
@@ -144,7 +144,7 @@
     <div class="prelative container">
         <div class="row">
             <div class="col-md-30">
-                <div class="image"><img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>pink.png" alt=""></div>
+                <div class="image"><img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>Layer-342.jpg" alt=""></div>
             </div>
             <div class="col-md-30">
                 <div class="box-content">
@@ -178,7 +178,7 @@
                 </div>
             </div>
             <div class="col-md-30">
-            <div class="image"><img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>pink.png" alt=""></div>
+            <div class="image"><img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>Layer-321.jpg" alt=""></div>
 
             </div>
         </div>
