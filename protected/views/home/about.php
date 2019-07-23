@@ -187,22 +187,52 @@
                 </div>
             </div>
         </div>
+        <?php
+            $mod_orang = [
+                1 => [
+                    'gambar' => 'aboutcon0',
+                    'nama' => 'Meilyana Widjaja',
+                    'pangkat' => 'Direktur Utama'
+                ],
+                [
+                    'gambar' => 'aboutcon1',
+                    'nama' => 'Hendry',
+                    'pangkat' => 'Direktur'
+                ],
+                [
+                    'gambar' => 'aboutcon2',
+                    'nama' => 'Alan Priyambodo Krisnamurti',
+                    'pangkat' => 'Direktur'
+                ],
+                [
+                    'gambar' => 'aboutcon3',
+                    'nama' => 'Sumardi Wijaya',
+                    'pangkat' => 'Komisaris Utama'
+                ],
+                [
+                    'gambar' => 'aboutcon4',
+                    'nama' => 'Kentarto',
+                    'pangkat' => 'Komisaris Independen'
+                ]
+                
+            ];
+        ?>
         <div class="row">
-            <?php for($i=0;$i<=5;$i++){?>
+            <?php foreach($mod_orang as $key => $value): ?>
             <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
                     <div class="image">
-                        <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>aboutcon<?php echo $i ?>.jpg" alt="" >
+                        <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>.jpg" alt="" >
                     </div>
                     <div class="nama">
-                        <p>Ir. Sandojo Rustanto</p>
+                        <p><?php echo $value['nama'] ?></p>
                     </div>
                     <div class="jabatan">
-                        <p><?php echo Tt::t('front', 'Komisaris Utama') ?></p>
+                        <p><?php echo $value['pangkat'] ?></p>
                     </div>
                 </div>
             </div>
-            <?php } ?>
+            <?php endforeach ?>
             <!-- <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
                     <div class="image">
