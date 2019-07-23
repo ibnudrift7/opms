@@ -192,27 +192,27 @@
                 1 => [
                     'gambar' => 'aboutcon0',
                     'nama' => 'Meilyana Widjaja',
-                    'pangkat' => 'Direktur Utama'
+                    'pangkat' => Tt::t('front', 'Direktur Utama')
                 ],
                 [
                     'gambar' => 'aboutcon1',
                     'nama' => 'Hendry',
-                    'pangkat' => 'Direktur'
+                    'pangkat' => Tt::t('front', 'Direktur')
                 ],
                 [
                     'gambar' => 'aboutcon2',
                     'nama' => 'Alan Priyambodo Krisnamurti',
-                    'pangkat' => 'Direktur'
+                    'pangkat' => Tt::t('front', 'Direktur')
                 ],
                 [
                     'gambar' => 'aboutcon3',
                     'nama' => 'Sumardi Wijaya',
-                    'pangkat' => 'Komisaris Utama'
+                    'pangkat' => Tt::t('front', 'Komisaris Utama')
                 ],
                 [
                     'gambar' => 'aboutcon4',
                     'nama' => 'Kentarto',
-                    'pangkat' => 'Komisaris Independen'
+                    'pangkat' => Tt::t('front', 'Komisaris Independen')
                 ]
                 
             ];
