@@ -21,8 +21,7 @@ class Common {
         // self::mailMail($config['to'], $config['from'], $config['subject'], $config['message'], $config['cc'], $config['bcc']);
         
         
-        self::mailPhpMailer($config['to'], $config['from'], $config['subject'], $config['message'], $config['cc'], $config['bcc'], $config['attachment']);
-        
+        self::mailPhpMailer($config['to'], $config['from'], $config['subject'], $config['message'], $config['cc'], $config['bcc'], $config['attachment']);       
 
 
         // self::mailSmtp($config['to'], $config['from'], $config['subject'], $config['message'], $config['cc'], $config['bcc']);
@@ -124,22 +123,24 @@ class Common {
             }
         }
 
-        $mail->IsSMTP();  // telling the class to use SMTP
-        $mail->Mailer = "smtp"; 
-        $mail->Host = "markdesign.net";
-        $mail->Port = 465;
-        $mail->SMTPSecure = 'ssl'; 					
-        $mail->SMTPAuth = true; // turn on SMTP authentication
-        $mail->Username = "test@markdesign.net"; // SMTP username
-        $mail->Password = "1q2w3e4r5t6y"; // SMTP password 
+        // $mail->IsSMTP();  // telling the class to use SMTP
+        // $mail->Mailer = "smtp"; 
+        // $mail->Host = "markdesign.net";
+        // $mail->Port = 465;
+        // $mail->SMTPSecure = 'ssl'; 					
+        // $mail->SMTPAuth = true; // turn on SMTP authentication
+        // $mail->Username = "test@markdesign.net"; // SMTP username
+        // $mail->Password = "1q2w3e4r5t6yTest"; // SMTP password  
 
         $mail -> SetFrom($from, Yii::app()->name);
         $mail -> Subject = $subject;
         $mail -> AltBody = "To view the message, please use an HTML compatible email viewer!";
         $mail -> MsgHTML($message);
 
-        foreach ($attachment as $key => $value) {
-            $mail->AddAttachment($value);
+        if (is_array($attachment)) {
+            foreach ($attachment as $key => $value) {
+                $mail->AddAttachment($value);
+            }
         }
 
         $mail->Send();

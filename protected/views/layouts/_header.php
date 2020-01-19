@@ -41,14 +41,14 @@
   <div class="prelative container mx-auto">
     <div class="row">
       <div class="col-md-20">
-      <img href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>" src="<?php echo $this->assetBaseurl; ?>logo-atas.png" alt="" class="img img-fluid">
+      <img href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>" src="<?php echo $this->assetBaseurl; ?>logo-head-white.png" alt="" class="img img-fluid">
       </div>
       <div class="col-md-40">
         <div class="menu-block-top text-right align-middle">
           <div class="d-inline-block mx-2 calls_info align-middle">
-            OPMS HOTLINE
+            PT. OPTIMA PRIMA METAL SINERGI HOTLINE
             <img src="<?php echo $this->assetBaseurl; ?>wa-atas.png" alt="" class="d-inline px-2 img img-fluid">
-            <a href="#"><b>0812 3500 9900</b></a>
+            <a href="https://wa.me/6282333112268"><b>0823 3311 2268</b></a>
           </div>
           <div class="separate_line_white d-inline-block align-middle"></div>
           <div class="languages d-inline-block align-middle">
@@ -98,7 +98,7 @@
       <div class="col-md-15 col-sm-15">
         <div class="lgo_web_headrs_wb">
           <a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>">
-            <img href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>" src="<?php echo $this->assetBaseurl; ?>logo-atas.png" alt="" class="img img-fluid">
+            <img href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>" src="<?php echo $this->assetBaseurl; ?>logo-head-white.png" alt="" class="img img-fluid">
           </a>
         </div>
       </div>

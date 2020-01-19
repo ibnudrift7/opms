@@ -5,10 +5,25 @@
                 <?php if (Yii::app()->language == 'en'): ?>
                 <div class="title">
                     <h3>INQUIRY OF USED IRON SALES & PURCHASES</h3>
-                    <h4>Service Estimator PT. OPMS Will Be Ready to Help You</h4>
+                    <h4>Service Estimator PT. Optima Prima Metal Sinergi Will Be Ready to Help You</h4>
                 </div>
                 <div class="subtitle">
-                    <p>CONTACT OUR HOTLINE <span><img src="<?php echo $this->assetBaseurl; ?>WA-Logo.png" alt="">0851 0212 3698 (phone & wa)</span></p>
+					<table>
+						<tr>
+							<td>CONTACT OUR HOTLINE</td>
+							<td><img src="<?php echo $this->assetBaseurl; ?>WA-Logo.png" alt=""></td>
+							<td><a href="http://wa.me/6282333112268">0823 3311 2268 (phone & wa)</a></td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>CONTACT OUR ESTIMATOR</td>
+							<td><img src="<?php echo $this->assetBaseurl; ?>WA-Logo.png" alt=""></td>
+							<td><a href="http://wa.me/6282131477850">0821 3147 7850 (phone & wa)</a></td>
+						</tr>
+					</table>
+<!--                    <p>CONTACT OUR HOTLINE <span><img src="--><?php //echo $this->assetBaseurl; ?><!--WA-Logo.png" alt="">0823 3311 2268 (phone & wa)</span> <br>-->
+<!--                    CONTACT OUR ESTIMATOR <span><img src="--><?php //echo $this->assetBaseurl; ?><!--WA-Logo.png" alt="">08133133 0008 (phone & wa)</span></p>-->
                 </div>
                 <div class="garis-formhome"></div>
                 <div class="atau">
@@ -17,10 +32,24 @@
                 <?php else: ?>
 				<div class="title">
 					<h3>INKUIRI PENJUALAN & PEMBELIAN BESI BEKAS</h3>
-					<h4>Layanan Estimator PT. OPMS Akan Siap Membantu Anda</h4>
+					<h4>Layanan Estimator PT. Optima Prima Metal Sinergi Akan Siap Membantu Anda</h4>
 				</div>
 				<div class="subtitle">
-					<p>HUBUNGI HOTLINE KAMI <span><img src="<?php echo $this->assetBaseurl; ?>WA-Logo.png" alt="">0851 0212 3698 (phone & wa)</span></p>
+					<table>
+						<tr>
+							<td>HUBUNGI HOTLINE KAMI</td>
+							<td><img src="<?php echo $this->assetBaseurl; ?>WA-Logo.png" alt=""></td>
+							<td><a href="http://wa.me/6282333112268">0823 3311 2268 (phone & wa)</a></td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>HUBUNGI ESTIMATOR KAMI</td>
+							<td><img src="<?php echo $this->assetBaseurl; ?>WA-Logo.png" alt=""></td>
+							<td><a href="http://wa.me/6281331330008">0813 3133 0008 (phone & wa)</a></td>
+						</tr>
+					</table>
+<!--					<p>HUBUNGI HOTLINE KAMI <span><img src="--><?php //echo $this->assetBaseurl; ?><!--WA-Logo.png" alt="">0823 3311 2268 (phone & wa)</span></p>-->
 				</div>
 				<div class="garis-formhome"></div>
 				<div class="atau">
@@ -28,19 +57,19 @@
 				</div>
                 <?php endif ?>
 
-				<form method="post" action="#" onsubmit="javascript: alert('underconstruction'); return false;">
+				<form method="post" action="<?php echo CHtml::normalizeUrl(array('/home/hubungi')); ?>">
 					<div class="form-row">
 						<div class="form-group col-md-20">
 							<label for="">name</label>
-							<input type="text" class="form-control" id="" placeholder="">
+							<input type="text" class="form-control" id="" name="ContactForm[name]" required>
 						</div>
 						<div class="form-group col-md-20">
 							<label for="">telephone</label>
-							<input type="text" class="form-control" id="" placeholder="">
+							<input type="text" class="form-control" id="" name="ContactForm[phone]" required>
 						</div>
 						<div class="form-group col-md-20">
 							<label for="inputEmail4">Email</label>
-							<input type="email" class="form-control" id="inputEmail4" placeholder="">
+							<input type="email" class="form-control" id="inputEmail4" name="ContactForm[email]" required>
 						</div>
 					</div>
 					<div class="form-row">
@@ -52,7 +81,7 @@
                             <?php endif ?>
 						</div>
 						<div class="form-group col-md-10">
-							<button class="">Submit</button>
+							<button type="submit">Submit</button>
 						</div>
 					</div>
 				</form>

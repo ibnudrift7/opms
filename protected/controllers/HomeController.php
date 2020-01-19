@@ -533,6 +533,15 @@ class HomeController extends Controller
 		));
 	}
 
+	public function actionPresRelease()
+	{
+		$this->pageTitle = 'Press Release - '.$this->pageTitle;
+		$this->layout='//layouts/column2';
+
+		$this->render('press_release', array(	
+		));
+	}
+
 	public function actionLayanan()
 	{
 		$this->pageTitle = 'Layanan - '.$this->pageTitle;
@@ -583,7 +592,51 @@ class HomeController extends Controller
 		$this->pageTitle = 'Hubungi - '.$this->pageTitle;
 		$this->layout='//layouts/column2';
 
+		$model = new ContactForm;
+		$model->scenario = 'insert';
+
+		if(isset($_POST['ContactForm']))
+		{
+			$model->attributes=$_POST['ContactForm'];
+			$status = true;
+	        $secret_key = "6LdoQrQUAAAAAKwfwfJpIQbXg_b440-jdozg0HKa";
+	        $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret_key."&response=".$_POST['g-recaptcha-response']."&remoteip=".$_SERVER['REMOTE_ADDR']);
+	        $response = json_decode($response);
+	        if($response->success==false)
+	        {
+	          $status = false;
+	          $model->addError('verifyCode', 'Verify you are not robbot');
+	        }
+
+			if($status AND $model->validate())
+			{
+				// config email
+				$messaged = $this->renderPartial('//mail/contact',array(
+					'model'=>$model,
+				),TRUE);
+				$config = array(
+					'to'=>array($model->email, 'inquiry@opms.co.id', 'ibnudrift@gmail.com'),
+					'subject'=>'['.Yii::app()->name.'] Contact from '.$model->email,
+					'message'=>$messaged,
+				);
+				if ($this->setting['contact_cc']) {
+					$config['cc'] = array($this->setting['contact_cc']);
+				}
+				if ($this->setting['contact_bcc']) {
+					$config['bcc'] = array($this->setting['contact_bcc']);
+				}
+
+				// kirim email
+				Common::mail($config);
+
+				Yii::app()->user->setFlash('success','Thank you for contact us. We will respond to you as soon as possible.');
+				$this->refresh();
+			}
+
+		}
+
 		$this->render('hubungi', array(	
+			'model' => $model,
 		));
 	}
 
@@ -1155,7 +1208,7 @@ Staff dari perabotplastik.com akan menghubungi anda untuk konfirmasi dan penjela
 		{
 			$model->attributes=$_POST['ContactForm'];
 			$status = true;
-	        $secret_key = "6LewK0EUAAAAAKBkAiXhXsR1ELPt7mQK5mcPRll2";
+	        $secret_key = "6LdoQrQUAAAAAKwfwfJpIQbXg_b440-jdozg0HKa";
 	        $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret_key."&response=".$_POST['g-recaptcha-response']."&remoteip=".$_SERVER['REMOTE_ADDR']);
 	        $response = json_decode($response);
 	        if($response->success==false)
