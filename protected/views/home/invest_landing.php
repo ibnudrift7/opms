@@ -33,10 +33,9 @@
                 <div class="py-3"></div>
                 <div class="lefts_menu">
                     <ul class="list-unstyled">
-                        <li class="active"><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor')); ?>">INFORMASI INVESTOR</a></li>
-                        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial')); ?>">INFORMASI FINANSIAL</a></li>
-                        <!-- <li><a href="<?php // echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'')); ?>">Laporan keuangan</a></li> -->
-                        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance')); ?>">tata kelola perusahaan</a></li>
+                        <li <?php if ($_GET['name'] == 'investor'): ?>class="active"<?php endif ?> ><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor')); ?>">INFORMASI INVESTOR</a></li>
+                        <li <?php if ($_GET['name'] == 'financial'): ?>class="active"<?php endif ?> ><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial')); ?>">INFORMASI FINANSIAL</a></li>
+                        <li <?php if ($_GET['name'] == 'governance'): ?>class="active"<?php endif ?> ><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance')); ?>">tata kelola perusahaan</a></li>
                     </ul>
                 </div>
             </div>

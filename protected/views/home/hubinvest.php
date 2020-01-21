@@ -26,15 +26,19 @@
 
 <section class="hub-investor-sec-1">
     <div class="prelative container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
-                    <div class="image"><img class="" src="<?php echo $this->assetBaseurl; ?>hub11.png" alt=""></div>
+                    <div class="image">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor')); ?>">
+                        <img class="" src="<?php echo $this->assetBaseurl; ?>hub11.png" alt="">
+                        </a>
+                    </div>
                     <div class="title">
                         <p><?php echo Tt::t('front', 'INFORMASI INVESTOR') ?></p>
                     </div>
                     <div class="lebih">
-                        <a href="#">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor')); ?>">
                             <p><?php echo Tt::t('front', 'Lihat Lebih Lanjut'); ?></p>
                         </a>
                     </div>
@@ -42,18 +46,39 @@
             </div>
             <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
-                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>hub12.png" alt=""></div>
+                <div class="image">
+                    <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial')); ?>">
+                    <img src="<?php echo $this->assetBaseurl; ?>hub12.png" alt="">
+                    </a>
+                </div>
                     <div class="title">
                         <p><?php echo Tt::t('front', 'INFORMASI FINANSIAL') ?></p>
                     </div>
                     <div class="lebih">
-                        <a href="#">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial')); ?>">
                             <p><?php echo Tt::t('front', 'Lihat Lebih Lanjut'); ?></p>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-12 col-30">
+                <div class="box-content-dalam">
+                <div class="image">
+                    <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance')); ?>">
+                    <img src="<?php echo $this->assetBaseurl; ?>hub14.png" alt="">
+                    </a>
+                </div>
+                    <div class="title">
+                        <p><?php echo Tt::t('front', 'TATA KELOLA PERUSAHAAN') ?></p>
+                    </div>
+                    <div class="lebih">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance')); ?>">
+                            <p><?php echo Tt::t('front', 'Lihat Lebih Lanjut'); ?></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
                 <div class="image"><img src="<?php echo $this->assetBaseurl; ?>hub13.png" alt=""></div>
                     <div class="title">
@@ -65,20 +90,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-12 col-30">
-                <div class="box-content-dalam">
-                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>hub14.png" alt=""></div>
-                    <div class="title">
-                        <p><?php echo Tt::t('front', 'TATA KELOLA PERUSAHAAN') ?></p>
-                    </div>
-                    <div class="lebih">
-                        <a href="#">
-                            <p><?php echo Tt::t('front', 'Lihat Lebih Lanjut'); ?></p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            </div> -->
             <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
                 <div class="image">
