@@ -343,6 +343,6 @@
         visibility: hidden;*/
     }
     section.about-sec-4 .box-content-dalam .image{
-        display: none;
+        /*display: none;*/
     }
 </style>

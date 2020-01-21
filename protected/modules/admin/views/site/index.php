@@ -61,14 +61,8 @@ $this->breadcrumbs=array(
 
                 </ul>
 
-                <br />
-                
-                <h5 class="subtitle">Daily Statistics</h5><br />
-                <canvas id="myChart"></canvas>
-
                 
                 <div class="divider30"></div>
-
             </div> <!-- span-8 -->
             
             <div id="dashboard-right" class="span4">
@@ -76,53 +70,12 @@ $this->breadcrumbs=array(
                 <h5 class="subtitle">Announcements</h5>
                 
                 <div class="divider15"></div>
-                
-<?php
-$jmlPenjualan = Yii::app()->db->createCommand()
-    ->select('COUNT(id) as jml, SUM(total) as total')
-    ->from('or_order')
-    ->where('DATE_FORMAT(date_add, "%Y-%m-%d") = :date', array(':date'=>date('Y-m-d')))
-    ->queryRow();
-
-$jmlBerhasil = Yii::app()->db->createCommand()
-    ->select('COUNT(id) as jml, SUM(total) as total')
-    ->from('or_order')
-    ->where('DATE_FORMAT(date_add, "%Y-%m-%d") = :date AND order_status_id IN (2, 3, 6, 15, 17)', array(':date'=>date('Y-m-d')))
-    ->queryRow();
-?>
-                <div class="alert alert-block">
-                      <button data-dismiss="alert" class="close" type="button">&times;</button>
-                      <h4>Jumlah Transaksi Hari Ini</h4>
-                      <h2><?php echo $jmlPenjualan['jml'] ?> Transaksi</h2>
-                      <!-- <p style="margin: 8px 0">Don't share your password</p> -->
-                      <!-- <p style="margin: 8px 0">Lihat User Guide <a href="<?php echo Yii::app()->baseUrl.'/images/user-guide-victory.pdf' ?>">di sini</a> </p> -->
-                </div><!--alert-->
-                
-                <div class="alert alert-block">
-                      <button data-dismiss="alert" class="close" type="button">&times;</button>
-                      <h4>Penjualan Berhasil Hari Ini</h4>
-                      <h2><?php echo Cart::money($jmlBerhasil['total']) ?></h2>
-                      <!-- <p style="margin: 8px 0">Don't share your password</p> -->
-                      <!-- <p style="margin: 8px 0">Lihat User Guide <a href="<?php echo Yii::app()->baseUrl.'/images/user-guide-victory.pdf' ?>">di sini</a> </p> -->
-                </div><!--alert-->
-                
-                <div class="alert alert-block">
-                      <button data-dismiss="alert" class="close" type="button">&times;</button>
-                      <h4>Jumlah Transaksi Berhasil Hari Ini</h4>
-                      <h2><?php echo $jmlBerhasil['jml'] ?> Transaksi</h2>
-                      <!-- <p style="margin: 8px 0">Don't share your password</p> -->
-                      <!-- <p style="margin: 8px 0">Lihat User Guide <a href="<?php echo Yii::app()->baseUrl.'/images/user-guide-victory.pdf' ?>">di sini</a> </p> -->
-                </div><!--alert-->
 
                 <div class="alert alert-block">
                       <button data-dismiss="alert" class="close" type="button">&times;</button>
                       <p style="margin: 8px 0">Download User Guide</p>
                       <p style="margin: 8px 0">Lihat User Guide <a href="<?php echo Yii::app()->baseUrl.'/images/user-guide.pdf' ?>">di sini</a> </p>
-                </div>
-                
-                <br />
-                
-                
+                </div>                
                 <br />
                                         
             </div><!--span4-->
@@ -139,96 +92,3 @@ $jmlBerhasil = Yii::app()->db->createCommand()
         
     </div><!--maincontentinner-->
 </div><!--maincontent-->
-
-<?php
-$dataPenjulan = Yii::app()->db->createCommand()
-    ->select('COUNT(id) as jml, SUM(total) as total, DATE_FORMAT(date_add, "%Y-%m-%d") as tanggal, DATE_FORMAT(date_add, "%a") as hari')
-    ->from('or_order')
-    ->where('DATE_FORMAT(date_add, "%Y-%m-%d") BETWEEN :date1 AND :date2', array(':date1'=>date('Y-m-d', strtotime(date('Y-m-d').' -7 day')), ':date2'=>date('Y-m-d')))
-    ->order('tanggal ASC')
-    ->group('tanggal')
-    ->queryAll();
-
-$day = array();
-for ($i=0; $i < 7; $i++) { 
-    $day[date('D', strtotime(date("Y-m-d")."-".$i." day"))] = '"'.date('D', strtotime(date("Y-m-d")."-".$i." day")).'"';
-}
-$day = array_reverse($day);
-$dataPenjulan2 = array();
-foreach ($dataPenjulan as $key => $value) {
-    $dataPenjulan2[$value['hari']] = $value;
-}
-// print_r($dataPenjulan2['Mon']);
-$dataPenjulan3 = array();
-foreach ($day as $key => $value) {
-    $dataPenjulan3[] = $dataPenjulan2[$key];
-}
-$totalArray = array();
-$jmlTransaksi = array();
-foreach ($dataPenjulan3 as $key => $value) {
-    $totalArray[] = $value['total'];
-    $jmlTransaksi[] = $value['jml'];
-}
-// print_r($dataPenjulan3);
-
-?>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<script type="text/javascript">
-var ctx = document.getElementById("myChart");
-var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: [<?php echo implode(', ', $day); ?>],
-        datasets: [{
-            label: '# Penjualan',
-            data: [<?php echo implode(', ', $totalArray) ?>],
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255,99,132,1)',
-            borderWidth: 1
-        },
-        {
-            label: '# Jumlah Transaksi',
-            data: [<?php echo implode(', ', $jmlTransaksi) ?>],
-            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-            // backgroundColor: [
-            //     'rgba(255, 99, 132, 0.2)',
-            //     'rgba(54, 162, 235, 0.2)',
-            //     'rgba(255, 206, 86, 0.2)',
-            //     'rgba(75, 192, 192, 0.2)',
-            //     'rgba(153, 102, 255, 0.2)',
-            //     'rgba(255, 159, 64, 0.2)'
-            // ],
-            // 
-            // borderColor: [
-            //     'rgba(255,99,132,1)',
-            //     'rgba(54, 162, 235, 1)',
-            //     'rgba(255, 206, 86, 1)',
-            //     'rgba(75, 192, 192, 1)',
-            //     'rgba(153, 102, 255, 1)',
-            //     'rgba(255, 159, 64, 1)'
-            // ],
-            borderWidth: 1
-        }
-        // , {
-        //     label: '# Transaksi Berhasil',
-        //     data: [6, 10, 10, 6, 6, 9, 12],
-        //     backgroundColor: 'rgba(255, 206, 86, 0.2)',
-        //     borderColor: 'rgba(255, 206, 86, 1)',
-        //     borderWidth: 1
-        // }
-        ]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
-
-</script>

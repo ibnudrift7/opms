@@ -533,6 +533,15 @@ class HomeController extends Controller
 		));
 	}
 
+	public function actionInvest_landing()
+	{
+		$this->pageTitle = 'Hubungan Investor - '.$this->pageTitle;
+		$this->layout='//layouts/column2';
+
+		$this->render('invest_landing', array(	
+		));
+	}
+
 	public function actionPresRelease()
 	{
 		$this->pageTitle = 'Press Release - '.$this->pageTitle;
