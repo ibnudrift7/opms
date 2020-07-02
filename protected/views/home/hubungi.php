@@ -32,8 +32,7 @@
                 </div>
                 <div class="alamat">
                     <p>Jl. Margomulyo Permai blok AC no 10 Surabaya, Jawa Timur - Indonesia</p>
-                    <p class="teksmap"><a href="#">View on Google Map</a>
-                    </p>
+                    <!-- <p class="teksmap"><a href="#">View on Google Map</a></p> -->
                 </div>
                 <div class="kontak">
                     <table>
@@ -47,12 +46,17 @@
                         </tr>
                         <tr>
                             <td>Email</td>
-                            <td>info@opms.co.id</td>
+                            <td><a href="mailto:info@opms.co.id">info@opms.co.id</a></td>
                         </tr>
                         <tr>
-                            <td>Whatsapp</td>
-                            <td>082 333 112268 (Click to chat)</td>
+                            <td>Whatsapp Hotline</td>
+                            <!-- <td>082 333 112268 (Click to chat)</td> -->
+                            <td><a href="https://api.whatsapp.com/send?phone=6282143031695">0821 4303 1695</a></td>
                         </tr>
+                        <!-- <tr>
+                            <td>Contact Our Estimator</td>
+                            <td><a href="https://api.whatsapp.com/send?phone=6282143031697">0821 4303 1697</a></td>
+                        </tr> -->
                     </table>
 
                 </div>
@@ -144,3 +148,10 @@
         $('.alert.alert-block.alert-success.fade').removeClass('fade');
     })
 </script>
+<style type="text/css">
+    .kontak{}
+    .kontak table{}
+    .kontak table td a{
+        color: #000;
+    }
+</style>

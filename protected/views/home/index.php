@@ -4,10 +4,11 @@
             <div class="col-md-60">
                 <?php if (Yii::app()->language == 'en'): ?>
                 <div class="judul">
-                    <p>Why does PT. You Can Trust OPMS</p>
+                    <p>Why trust PT. OPMS</p>
                 </div>
-                <div class="caption">
-                    <p>For Selling / Buying Needs of Used & Used Iron?</p>
+                <div class="caption text-center">
+                    <!-- <p>For Selling / Buying Needs of Used & Used Iron?</p> -->
+                    <p>For Selling / Buying Metal Scraps</p>
                 </div>
                 <div class="subjudul">
                     <p>our superiority</p>
@@ -16,7 +17,7 @@
                 <div class="judul">
                     <p>Mengapa PT. OPMS Dapat Anda Percaya</p>
                 </div>
-                <div class="caption">
+                <div class="caption text-center">
                     <p>Untuk Kebutuhan Jual / Beli Besi Bekas & Kapal Bekas Anda?</p>
                 </div>
                 <div class="subjudul">
@@ -194,7 +195,8 @@
             <div class="info">
                 <p>Jl Margomulyo Permai Blok AC no 10, Surabaya.</p>
                 <p><?php echo Tt::t('front', 'Telp') ?>. (031) 7495673  Fax. (031) 7490073</p>
-                <p><b>Whatsapp Hotline. 0851 0212 3698</b></p>
+                <!-- <p><b>Whatsapp Hotline. 0851 0212 3698</b></p> -->
+                <p><b>Whatsapp Hotline. <a href="http://wa.me/6282333112268">0823 3311 2268</a></b></p>
                 <p>Email. info@opms.co.id</p>
         </div>
     </div>

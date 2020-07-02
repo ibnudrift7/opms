@@ -30,7 +30,7 @@
             <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
                     <div class="image">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor')); ?>">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor', 'sub'=>'investor_prospektus_penawaran_umum')); ?>">
                         <img class="" src="<?php echo $this->assetBaseurl; ?>hub11.png" alt="">
                         </a>
                     </div>
@@ -38,7 +38,7 @@
                         <p><?php echo Tt::t('front', 'INFORMASI INVESTOR') ?></p>
                     </div>
                     <div class="lebih">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor')); ?>">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor', 'sub'=>'investor_prospektus_penawaran_umum')); ?>">
                             <p><?php echo Tt::t('front', 'Lihat Lebih Lanjut'); ?></p>
                         </a>
                     </div>
@@ -47,7 +47,7 @@
             <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
                 <div class="image">
-                    <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial')); ?>">
+                    <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial', 'sub'=>'financial_ikhtisar_laporan')); ?>">
                     <img src="<?php echo $this->assetBaseurl; ?>hub12.png" alt="">
                     </a>
                 </div>
@@ -55,7 +55,7 @@
                         <p><?php echo Tt::t('front', 'INFORMASI FINANSIAL') ?></p>
                     </div>
                     <div class="lebih">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial')); ?>">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial', 'sub'=>'financial_ikhtisar_laporan')); ?>">
                             <p><?php echo Tt::t('front', 'Lihat Lebih Lanjut'); ?></p>
                         </a>
                     </div>
@@ -64,7 +64,7 @@
             <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
                 <div class="image">
-                    <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance')); ?>">
+                    <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance', 'sub'=>'informasi_tata_kelola')); ?>">
                     <img src="<?php echo $this->assetBaseurl; ?>hub14.png" alt="">
                     </a>
                 </div>
@@ -72,7 +72,7 @@
                         <p><?php echo Tt::t('front', 'TATA KELOLA PERUSAHAAN') ?></p>
                     </div>
                     <div class="lebih">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance')); ?>">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance', 'sub'=>'informasi_tata_kelola')); ?>">
                             <p><?php echo Tt::t('front', 'Lihat Lebih Lanjut'); ?></p>
                         </a>
                     </div>
@@ -91,7 +91,7 @@
                     </div>
                 </div>
             </div> -->
-            <div class="col-md-12 col-30">
+            <!-- <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
                 <div class="image">
                     <a href="<?php echo CHtml::normalizeUrl(array('/home/presRelease')); ?>">
@@ -111,7 +111,8 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            
         </div>
     </div>
 </section>

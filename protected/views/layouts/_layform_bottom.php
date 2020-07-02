@@ -12,18 +12,16 @@
 						<tr>
 							<td>CONTACT OUR HOTLINE</td>
 							<td><img src="<?php echo $this->assetBaseurl; ?>WA-Logo.png" alt=""></td>
-							<td><a href="http://wa.me/6282333112268">0823 3311 2268 (phone & wa)</a></td>
+							<td><a href="http://wa.me/6282143031695">0821 4303 1695 (phone & wa)</a></td>
 						</tr>
 					</table>
 					<table>
 						<tr>
 							<td>CONTACT OUR ESTIMATOR</td>
 							<td><img src="<?php echo $this->assetBaseurl; ?>WA-Logo.png" alt=""></td>
-							<td><a href="http://wa.me/6282131477850">0821 3147 7850 (phone & wa)</a></td>
+							<td><a href="http://wa.me/6282143031697">0821 4303 1697 (phone & wa)</a></td>
 						</tr>
 					</table>
-<!--                    <p>CONTACT OUR HOTLINE <span><img src="--><?php //echo $this->assetBaseurl; ?><!--WA-Logo.png" alt="">0823 3311 2268 (phone & wa)</span> <br>-->
-<!--                    CONTACT OUR ESTIMATOR <span><img src="--><?php //echo $this->assetBaseurl; ?><!--WA-Logo.png" alt="">08133133 0008 (phone & wa)</span></p>-->
                 </div>
                 <div class="garis-formhome"></div>
                 <div class="atau">

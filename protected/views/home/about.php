@@ -61,7 +61,8 @@
             </div>
             <div class="col-md-30">
                 <div class="box-content-right">
-                    <div class="image">                        <img src="<?php echo $this->assetBaseurl; ?>Rectangle1.png" alt="" >
+                    <div class="image">                        
+                        <img src="<?php echo $this->assetBaseurl; ?>Rectangle1.png" alt="" >
                     </div>
                 </div>
             </div>
@@ -194,27 +195,32 @@
                 [
                     'gambar' => 'aboutcon2',
                     'nama' => 'Sumardi Wijaya',
-                    'pangkat' => 'Komisaris Utama'
+                    'pangkat' => 'Komisaris Utama',
+                    'info' => '<p>Menjabat sebagai Komisaris Utama Perseroan sejak 2012</p><p>Memperoleh gelar dari Sekolah Guru Tionghoa, Ujung Pandang pada tahun 1964.</p>',
                 ],
                 [
                     'gambar' => 'aboutcon3',
                     'nama' => 'Kentarto',
-                    'pangkat' => 'Komisaris Independen'
+                    'pangkat' => 'Komisaris Independen',
+                    'info'=>'<p>Menjabat sebagai Komisaris Independen Perseroan sejak 2019</p><p>Memperoleh gelar Diploma dari Institute Teknologi 10 Nopember Surabaya pada tahun 1986, Sarjana Electro dan Lingkungan dari Institute Teknologi Pembangunan Surabaya pada tahun 2000 dan Magister Lingkungan dari Institute Teknologi 10 Nopember Surabaya pada tahun 2002.</p>',
                 ],
                 [
                     'gambar' => 'aboutcon0',
                     'nama' => 'Meilyna Widjaja',
-                    'pangkat' => 'Direktur Utama'
+                    'pangkat' => 'Direktur Utama',
+                    'info'=>'<p>Menjabat sebagai Direktur Utama Perseroan sejak 2019</p><p>Memperoleh gelar Bachelor of Science in Marketing dari University of San Fransisco pada tahun 1997 dan Master of International Management dari Thunderbird Graduate School of International Management pada tahun 2000.</p>',
                 ],
                 [
                     'gambar' => 'aboutcon1',
                     'nama' => 'Hendry',
-                    'pangkat' => 'Direktur'
+                    'pangkat' => 'Direktur',
+                    'info'=>'<p>Menjabat sebagai Direktur Perseroan sejak 2019</p><p>Memperoleh gelar Bachelor of Science in Finance Arizona State University Tempe pada tahun 2000.</p>',
                 ],
                 [
                     'gambar' => 'aboutcon4',
                     'nama' => 'Alan Priyambodo Krisnamurti',
-                    'pangkat' => 'Direktur'
+                    'pangkat' => 'Direktur',
+                    'info'=>'<p>Menjabat sebagai Direktur Perseroan sejak 2019</p><p>Memperoleh gelar Sarjana Manajemen Keuangan dari STIE</p><p>Malangkucecwara Malang, Jawa Timur pada tahun 1998.</p>',
                 ],
                 
                 
@@ -234,102 +240,83 @@
                     <div class="jabatan">
                         <p><?php echo $value['pangkat'] ?></p>
                     </div>
+                    <div class="infos_desc">
+                        <?php echo $value['info']; ?>
+                    </div>
                 </div>
             </div>
             <?php endforeach ?>
-            <!-- <div class="col-md-12 col-30">
-                <div class="box-content-dalam">
-                    <div class="image">
-                    <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>about-con1<?php $i ?>.png" alt="" >
-                    </div>
-                    <div class="nama">
-                        <p>Ir. Sandojo Rustanto</p>
-                    </div>
-                    <div class="jabatan">
-                        <p><?php echo Tt::t('front', 'Komisaris Utama') ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-30">
-                <div class="box-content-dalam">
-                    <div class="image">
-                    <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>about-con1<?php $i ?>.png" alt="" >
-                    </div>
-                    <div class="nama">
-                        <p>Ir. Sandojo Rustanto</p>
-                    </div>
-                    <div class="jabatan">
-                        <p><?php echo Tt::t('front', 'Komisaris Utama') ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-30">
-                <div class="box-content-dalam">
-                    <div class="image">
-                    <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>about-con1<?php $i ?>.png" alt="" >
-                    </div>
-                    <div class="nama">
-                        <p>Ir. Sandojo Rustanto</p>
-                    </div>
-                    <div class="jabatan">
-                        <p><?php echo Tt::t('front', 'Komisaris Utama') ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-30">
-                <div class="box-content-dalam">
-                    <div class="image">
-                    <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>about-con1<?php $i ?>.png" alt="" >
-                    </div>
-                    <div class="nama">
-                        <p>Ir. Sandojo Rustanto</p>
-                    </div>
-                    <div class="jabatan">
-                        <p><?php echo Tt::t('front', 'Komisaris Utama') ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-30">
-                <div class="box-content-dalam">
-                    <div class="image">
-                    <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>about-con1<?php $i ?>.png" alt="" >
-                    </div>
-                    <div class="nama">
-                        <p>Ir. Sandojo Rustanto</p>
-                    </div>
-                    <div class="jabatan">
-                        <p><?php echo Tt::t('front', 'Komisaris Utama') ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-30">
-                <div class="box-content-dalam">
-                    <div class="image">
-                    <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>about-con1<?php $i ?>.png" alt="" >
-                    </div>
-                    <div class="nama">
-                        <p>Ir. Sandojo Rustanto</p>
-                    </div>
-                    <div class="jabatan">
-                        <p><?php echo Tt::t('front', 'Komisaris Utama') ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-30">
-                <div class="box-content-dalam">
-                    <div class="image">
-                    <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?>about-con1<?php $i ?>.png" alt="" >
-                    </div>
-                    <div class="nama">
-                        <p>Ir. Sandojo Rustanto</p>
-                    </div>
-                    <div class="jabatan">
-                        <p><?php echo Tt::t('front', 'Komisaris Utama') ?></p>
-                    </div>
-                </div>
-            </div> -->
-
         </div>
+
+        <div class="py-5"></div>
+
+        <div class="row">
+            <div class="col-md-60">
+                <div class="box-content-title">
+                    <?php if (Yii::app()->language == 'en'): ?>
+                    <div class="title">
+                        <p>CORPORATE SECRETARY and AUDIT COMMITTEE PT Optima Prima Metal Sinergi</p>
+                    </div>
+                    <?php else: ?>
+                    <div class="title">
+                        <p>DEWAN KOMITE SEKRETARIS DAN AUDIT PT Optima Prima Metal Sinergi</p>
+                    </div>
+                    <?php endif ?>
+                </div>
+            </div>
+        </div>
+        <?php
+        $mod_orang2 = [
+            1 => 
+            [
+                'gambar' => 'banns_rubby_nn1',
+                'nama' => 'Rubbyanto Ping Hauw Handjaja K',
+                'pangkat' => 'Sekertaris Perusahaan',
+                'info' => '<p>Memperoleh gelar Sarjana Ekonomi jurusan Akuntansi dari Universitas Surabaya tahun 2000 Manajer Akuntansi dan Perpajakan PT Asian Prima Indosteel (2012-2015), Senior Manager Akuntansi dan Perpajakan PT Asian Prima Indosteel (2015-2019), Corporate Secretary Perseroan (2019-sekarang).</p>',
+            ],
+            [
+                'gambar' => 'banns_rubby_nn2',
+                'nama' => 'Kentarto',
+                'pangkat' => 'Ketua Komite Audit',
+                'info'=>'<p>Menjabat sebagai Komisaris Independen Perseroan sejak 2019</p><p>Memperoleh gelar Diploma dari Institute Teknologi 10 Nopember Surabaya pada tahun 1986, Sarjana Electro dan Lingkungan dari Institute Teknologi Pembangunan Surabaya pada tahun 2000 dan Magister Lingkungan dari Institute Teknologi 10 Nopember Surabaya pada tahun 2002.</p>',
+            ],
+
+            // [
+            //     'gambar' => 'aboutcon3',
+            //     'nama' => 'Bambang Agus Sanjaya',
+            //     'pangkat' => 'Audit Committee',
+            //     'info'=>'<p>Warga Negara Indonesia, 51 tahun, menjabat sebagai Anggota Komite Audit Perseroan sejak tanggal 4 Juli 2019.</p><p>Memperoleh gelar Sarjana Ekonomi Akuntansi Fakultas Ekonomi dari Universitas Airlangga. Memulai karir di KAP Santoso & Rekan (1989-1993), Internal Audit Group ARAYA (1993-1998), KAP Sutjipto Ngumar & Rekan (1998-2004), Ketua jurusan Akuntansi Universitas WR. Supratman Surabaya (1998-2002), Ketua LPPM Universitas Supratman Surabaya (2002-2006), KAP Santoso & Rekan (2004-2010), KAP Gedion Adi & Rekan Cabang Surabaya (2010-sekarang), Dosen beberapa Perguruan Tinggi Swasta di Surabaya (1993-sekarang) dan Direktur Lugas Konsultan (1998-sekarang).</p>',
+            // ],
+            // [
+            //     'gambar' => 'aboutcon3',
+            //     'nama' => 'Samsul Anam',
+            //     'pangkat' => 'Audit Committee',
+            //     'info'=>'<p>Warga Negara Indonesia, 57 tahun, menjabat sebagai Anggota Komite Audit Perseroan sejak tanggal 23 Juli 2019. Memperoleh gelar Sarjana Ekonomi Jurusan Manajemen dari Universitas Surabaya tahun 1985. Memulai karir di PT PAN ESGE - Computer Center (1987-1989), Branch Manager Malang (posisi terkahir) - PT Bank Bali / PT Bank Permata (1989-2005), Direktur - PT Millenia Furniture Industries&nbsp;Pasuruan (2005-sekarang).</p>',
+            // ],
+                            
+        ];
+    ?>
+        <div class="row">
+        <?php foreach($mod_orang2 as $key => $value): ?>
+        <div class="col-md-12 col-30">
+            <div class="box-content-dalam">
+                <div class="image">
+                    <img class="img img-fluid w-100" src="<?php echo $this->assetBaseurl; ?><?php echo $value['gambar'] ?>.jpg" alt="" >
+                </div>
+                <div class="nama">
+                    <p><?php echo $value['nama'] ?></p>
+                </div>
+                <div class="jabatan">
+                    <p><?php echo $value['pangkat'] ?></p>
+                </div>
+                <div class="infos_desc">
+                    <?php echo $value['info']; ?>
+                </div>
+            </div>
+        </div>
+        <?php endforeach ?>
+
+        <div class="clear clearfix"></div>
 
     </div>
 </section>
@@ -344,5 +331,9 @@
     }
     section.about-sec-4 .box-content-dalam .image{
         /*display: none;*/
+    }
+
+    section.about-sec-4 .box-content-dalam .nama{
+        font-size: 15px;
     }
 </style>

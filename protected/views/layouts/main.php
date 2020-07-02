@@ -38,7 +38,8 @@
             'config'=>array(),
             )
         );*/ ?>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script> 
    
     <!-- All JS -->
@@ -96,7 +97,7 @@
     </div> -->
     <script type="text/javascript">
         $(window).load(function(){
-        $('.t-backtop').hide();
+            $('.t-backtop').hide();
         });
         $(function(){
             $('.t-backtop').click(function () {
@@ -107,20 +108,25 @@
                 });
 
             var $win = $(window);
-                     $win.scroll(function () {
-                         if ($win.scrollTop() == 0)
-                         $('.t-backtop').hide();
-                         else if ($win.height() + $win.scrollTop() != $(document).height() || $win.height() + $win.scrollTop() > 500) {
-                         $('.t-backtop').show();
-                         }
-                     });
+             $win.scroll(function () {
+                 if ($win.scrollTop() == 0)
+                 $('.t-backtop').hide();
+                 else if ($win.height() + $win.scrollTop() != $(document).height() || $win.height() + $win.scrollTop() > 500) {
+                 $('.t-backtop').show();
+                 }
+             });
 
             $('.toscroll').click(function() {
                 var sn_id = $(this).attr('data-id');
+
+                var data_mins = $(this).attr('data-minus');
+                if (!data_mins) { data_mins = 0; }
+
                 $('html, body').animate({
-                    scrollTop: $("#"+ sn_id).offset().top
+                    scrollTop: $("#"+ sn_id).offset().top - data_mins
                 }, 1000);
             });
+
         });
     </script>
 

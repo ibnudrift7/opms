@@ -8,35 +8,6 @@
     $active_menu_pg = $controllers_ac.'/'.$e_activemenu;
 ?>
 
-
-<!-- <section class="header-top">
-    <div class="prelative container-header">
-        <div class="row">
-            <div class="col-md-45">
-
-            </div>
-            <div class="col-md-15">
-                <div class="box-telp">
-                    <p>
-                        <a href="#"><span><img src="<?php echo $this->assetBaseurl; ?>phone-white.png" alt=""></span> 081 6550 2656</a>
-                    </p>
-                </div>
-                <div class="contact">
-                    <a href="#">
-                        <p>CONTACT</p>
-                    </a>
-                </div>
-                <div class="bahasa">
-                    <p>
-                        <a href="#"><span class="active">EN</span></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span>IN</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
 <header class="head <?php if ($active_menu_pg != 'home/index'): ?>insides-head<?php endif ?>">
   <div class="prelative container mx-auto">
     <div class="row">
@@ -48,7 +19,7 @@
           <div class="d-inline-block mx-2 calls_info align-middle">
             PT. OPTIMA PRIMA METAL SINERGI HOTLINE
             <img src="<?php echo $this->assetBaseurl; ?>wa-atas.png" alt="" class="d-inline px-2 img img-fluid">
-            <a href="https://wa.me/6282333112268"><b>0823 3311 2268</b></a>
+            <a href="https://wa.me/6282143031695"><b>0821 4303 1695</b></a>
           </div>
           <div class="separate_line_white d-inline-block align-middle"></div>
           <div class="languages d-inline-block align-middle">
@@ -71,7 +42,18 @@
             <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Home') ?></a></li>
             <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Tentang Kami') ?></a></li>
             <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/layanan', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'layanan') ?></a></li>
-            <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubinvest', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'hubungan investor') ?></a></li>
+
+            <li class="list-inine-item menu dropdown">
+            <a class="nav-link dropdown-toggle" href="<?php echo CHtml::normalizeUrl(array('/home/hubinvest', 'lang'=>Yii::app()->language)); ?>" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <?php echo Tt::t('front', 'hubungan investor') ?>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor', 'sub'=>'investor_prospektus_penawaran_umum')); ?>"><?php echo Tt::t('front', 'INFORMASI INVESTOR') ?></a></li>
+              <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial', 'sub'=>'financial_ikhtisar_laporan')); ?>"><?php echo Tt::t('front', 'INFORMASI FINANSIAL') ?></a></li>
+              <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance', 'sub'=>'informasi_tata_kelola')); ?>"><?php echo Tt::t('front', 'TATA KELOLA PERUSAHAAN') ?></a></li>
+            </ul>
+          </li>
+
             <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'karir') ?></a></li>
             <li class="list-inline-item menu paling-kanan"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubungi', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Hubungi Kami') ?></a></li>
           </ul>
@@ -80,16 +62,6 @@
     </div>
   </div>
 </header>
-
-<!-- <div class="menu-block-bottom text-right cmenubot">
-  <ul class="list-inline text-right">
-    <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>">Home</a></li>
-    <li class="list-inline-item menu"><a href="#">tentang kami</a></li>
-    <li class="list-inline-item menu"><a href="#">produk</a></li>
-    <li class="list-inline-item menu"><a href="#">proses & kualitas</a></li>
-    <li class="list-inline-item menu"><a href="#">hubungi kami</a></li>
-  </ul>
-</div> -->
 
 <section id="myAffix" class="header-affixs affix-top">
   <!-- <div class="clear height-15"></div> -->
@@ -133,7 +105,18 @@
     <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Home') ?></a></li>
     <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Tentang Kami') ?></a></li>
     <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/layanan', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'layanan') ?></a></li>
-    <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubinvest', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'hubungan investor') ?></a></li>
+    
+    <li class="list-inine-item menu dropdown">
+      <a class="nav-link dropdown-toggle" href="<?php echo CHtml::normalizeUrl(array('/home/hubinvest', 'lang'=>Yii::app()->language)); ?>" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <?php echo Tt::t('front', 'hubungan investor') ?>
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor', 'sub'=>'investor_prospektus_penawaran_umum')); ?>"><?php echo Tt::t('front', 'INFORMASI INVESTOR') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial', 'sub'=>'financial_ikhtisar_laporan')); ?>"><?php echo Tt::t('front', 'INFORMASI FINANSIAL') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance', 'sub'=>'informasi_tata_kelola')); ?>"><?php echo Tt::t('front', 'TATA KELOLA PERUSAHAAN') ?></a></li>
+      </ul>
+    </li>
+
     <li class="list-inline-item menu"><a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'karir') ?></a></li>
     <li class="list-inline-item menu paling-kanan"><a href="<?php echo CHtml::normalizeUrl(array('/home/hubungi', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Hubungi Kami') ?></a></li>
       <li class="nav-item">
@@ -183,3 +166,27 @@
   });
 </script>
 
+<style type="text/css">
+    section.live-chat {
+        position: fixed;
+        right: 0;
+        top: 35%;
+        z-index: 270;
+    }
+    @media screen and (max-width: 767px) {
+      section.live-chat {
+        display: none;
+      }
+    }
+</style>
+<section class="live-chat">
+    <div class="row">
+        <div class="col-md-60">
+            <div class="live">
+                <a href="https://api.whatsapp.com/send?phone=6282143031695">
+                    <img src="<?php echo $this->assetBaseurl; ?>Whatsapp-Click-to-chat.png" class="img img-fluid" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
