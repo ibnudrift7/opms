@@ -60,9 +60,10 @@ $this->menu=array(
 		// ),
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
-			'template'=>'{update} &nbsp; {delete} &nbsp; {pdf}',
+			// 'template'=>'{update} &nbsp; {delete} &nbsp; {pdf}',
+			'template'=>'{update} &nbsp; {pdf}',
 			'updateButtonUrl'=>'CHtml::normalizeUrl(array("update", "id"=>$data->id, "parent"=>"'.(($_GET['parent'] == '') ? '' : $_GET['parent']).'"))',
-			'deleteButtonUrl'=>'CHtml::normalizeUrl(array("delete", "id"=>$data->id, "parent"=>"'.(($_GET['parent'] == '') ? '' : $_GET['parent']).'"))',
+			// 'deleteButtonUrl'=>'CHtml::normalizeUrl(array("delete", "id"=>$data->id, "parent"=>"'.(($_GET['parent'] == '') ? '' : $_GET['parent']).'"))',
 			'buttons'=>array(
 				'pdf' => array(
 				    'label'=>'<i class="fa fa-arrow-right"></i>',     // text label of the button

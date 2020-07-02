@@ -30,7 +30,7 @@
             <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
                     <div class="image">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor', 'sub'=>'investor_prospektus_penawaran_umum')); ?>">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'category'=> 1, 'sub'=> 4)); ?>">
                         <img class="" src="<?php echo $this->assetBaseurl; ?>hub11.png" alt="">
                         </a>
                     </div>
@@ -38,7 +38,7 @@
                         <p><?php echo Tt::t('front', 'INFORMASI INVESTOR') ?></p>
                     </div>
                     <div class="lebih">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor', 'sub'=>'investor_prospektus_penawaran_umum')); ?>">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'category'=> 1, 'sub'=> 4)); ?>">
                             <p><?php echo Tt::t('front', 'Lihat Lebih Lanjut'); ?></p>
                         </a>
                     </div>
@@ -47,7 +47,7 @@
             <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
                 <div class="image">
-                    <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial', 'sub'=>'financial_ikhtisar_laporan')); ?>">
+                    <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'category'=>2, 'sub'=> 8)); ?>">
                     <img src="<?php echo $this->assetBaseurl; ?>hub12.png" alt="">
                     </a>
                 </div>
@@ -55,7 +55,7 @@
                         <p><?php echo Tt::t('front', 'INFORMASI FINANSIAL') ?></p>
                     </div>
                     <div class="lebih">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial', 'sub'=>'financial_ikhtisar_laporan')); ?>">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'category'=>2, 'sub'=> 8)); ?>">
                             <p><?php echo Tt::t('front', 'Lihat Lebih Lanjut'); ?></p>
                         </a>
                     </div>
@@ -64,7 +64,7 @@
             <div class="col-md-12 col-30">
                 <div class="box-content-dalam">
                 <div class="image">
-                    <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance', 'sub'=>'informasi_tata_kelola')); ?>">
+                    <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'category'=>3, 'sub'=> 10)); ?>">
                     <img src="<?php echo $this->assetBaseurl; ?>hub14.png" alt="">
                     </a>
                 </div>
@@ -72,46 +72,12 @@
                         <p><?php echo Tt::t('front', 'TATA KELOLA PERUSAHAAN') ?></p>
                     </div>
                     <div class="lebih">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance', 'sub'=>'informasi_tata_kelola')); ?>">
+                        <a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'category'=>3, 'sub'=> 10)); ?>">
                             <p><?php echo Tt::t('front', 'Lihat Lebih Lanjut'); ?></p>
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-md-12 col-30">
-                <div class="box-content-dalam">
-                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>hub13.png" alt=""></div>
-                    <div class="title">
-                        <p><?php echo Tt::t('front', 'LAPORAN KEUANGAN') ?></p>
-                    </div>
-                    <div class="lebih">
-                        <a href="#">
-                            <p><?php echo Tt::t('front', 'Lihat Lebih Lanjut'); ?></p>
-                        </a>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="col-md-12 col-30">
-                <div class="box-content-dalam">
-                <div class="image">
-                    <a href="<?php echo CHtml::normalizeUrl(array('/home/presRelease')); ?>">
-                    <img src="<?php echo $this->assetBaseurl; ?>koran.png" alt="">
-                    </a>
-                </div>
-                    <div class="title">
-                        <?php if(Yii::app()->language == 'en'): ?>
-                        <p>PRESS RELEASE</p>
-                        <?php else: ?>
-                        <p>JUMPA PERS</p>
-                        <?php endif; ?>
-                    </div>
-                    <div class="lebih">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/home/presRelease')); ?>">
-                            <p><?php echo Tt::t('front', 'Lihat Lebih Lanjut'); ?></p>
-                        </a>
-                    </div>
-                </div>
-            </div> -->
             
         </div>
     </div>

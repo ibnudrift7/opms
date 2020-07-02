@@ -48,9 +48,9 @@
               <?php echo Tt::t('front', 'hubungan investor') ?>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor', 'sub'=>'investor_prospektus_penawaran_umum')); ?>"><?php echo Tt::t('front', 'INFORMASI INVESTOR') ?></a></li>
-              <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial', 'sub'=>'financial_ikhtisar_laporan')); ?>"><?php echo Tt::t('front', 'INFORMASI FINANSIAL') ?></a></li>
-              <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance', 'sub'=>'informasi_tata_kelola')); ?>"><?php echo Tt::t('front', 'TATA KELOLA PERUSAHAAN') ?></a></li>
+              <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'category'=>1, 'sub'=>4)); ?>"><?php echo Tt::t('front', 'INFORMASI INVESTOR') ?></a></li>
+              <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'category'=>2, 'sub'=>8)); ?>"><?php echo Tt::t('front', 'INFORMASI FINANSIAL') ?></a></li>
+              <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'category'=>3, 'sub'=>10)); ?>"><?php echo Tt::t('front', 'TATA KELOLA PERUSAHAAN') ?></a></li>
             </ul>
           </li>
 
@@ -111,9 +111,9 @@
         <?php echo Tt::t('front', 'hubungan investor') ?>
       </a>
       <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'investor', 'sub'=>'investor_prospektus_penawaran_umum')); ?>"><?php echo Tt::t('front', 'INFORMASI INVESTOR') ?></a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'financial', 'sub'=>'financial_ikhtisar_laporan')); ?>"><?php echo Tt::t('front', 'INFORMASI FINANSIAL') ?></a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'name'=>'governance', 'sub'=>'informasi_tata_kelola')); ?>"><?php echo Tt::t('front', 'TATA KELOLA PERUSAHAAN') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'category'=>1, 'sub'=>4)); ?>"><?php echo Tt::t('front', 'INFORMASI INVESTOR') ?></a></li>
+              <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'category'=>2, 'sub'=>8)); ?>"><?php echo Tt::t('front', 'INFORMASI FINANSIAL') ?></a></li>
+              <li><a href="<?php echo CHtml::normalizeUrl(array('/home/invest_landing', 'category'=>3, 'sub'=>10)); ?>"><?php echo Tt::t('front', 'TATA KELOLA PERUSAHAAN') ?></a></li>
       </ul>
     </li>
 
