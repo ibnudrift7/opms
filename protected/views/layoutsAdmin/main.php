@@ -46,13 +46,13 @@
         </div>
         <div class="headerinner">
             <ul class="headmenu">
+                <?php /*
                 <li >
                     <a class="dropdown-toggle" href="<?php echo CHtml::normalizeUrl(array('/admin/product/index')); ?>">
                     <span class="head-icon fa fa-tag"></span>
                     <span class="headmenu-label"><?php echo Tt::t('admin', 'Products') ?></span>
                     </a>
                 </li>
-                <?php /*
                 <li >
                     <a class="dropdown-toggle" href="<?php echo CHtml::normalizeUrl(array('/admin/slide/index')); ?>">
                         <span class="head-icon fa fa-image"></span>
@@ -77,13 +77,13 @@
                     <span class="headmenu-label"><?php echo Tt::t('admin', 'ge-ma') ?></span>
                     </a>
                 </li>
-                */ ?>
                 <li >
                     <a class="dropdown-toggle" href="<?php echo CHtml::normalizeUrl(array('/admin/static/contact')); ?>">
                     <span class="head-icon fa fa-phone"></span>
                     <span class="headmenu-label"><?php echo Tt::t('admin', 'Contact Us') ?></span>
                     </a>
                 </li>
+                */ ?>
 
                 <li class="right">
                     <div class="userloggedinfo">

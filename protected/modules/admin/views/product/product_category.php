@@ -102,7 +102,7 @@ jQuery(document).ready(function($)
     // activate Nestable for list 2
     $('#nestable2').nestable({
         group: 1,
-        maxDepth: 3,
+        maxDepth: 2,
     });
 
     // output initial serialised data
@@ -130,7 +130,7 @@ jQuery(document).ready(function($)
                     $( "#ajaxNestable" ).load( "<?php echo CHtml::normalizeUrl(array('/admin/'.$urlUpdate.'/index')); ?> #nestable2", function( response, status, xhr ) {
                         $('#nestable2').nestable({
                             group: 1,
-                            maxDepth: 3,
+                            maxDepth: 2,
                         });
                     });
                 });
@@ -154,7 +154,7 @@ jQuery(document).ready(function($)
                 $( "#ajaxNestable" ).load( "<?php echo CHtml::normalizeUrl(array('/admin/'.$urlUpdate.'/index')); ?> #nestable2", function( response, status, xhr ) {
                     $('#nestable2').nestable({
                         group: 1,
-                        maxDepth: 3,
+                        maxDepth: 2,
                     });
                 });
             });
@@ -174,7 +174,7 @@ jQuery(document).ready(function($)
                     $( "#ajaxNestable" ).load( "<?php echo CHtml::normalizeUrl(array('/admin/'.$urlUpdate.'/index')); ?> #nestable2", function( response, status, xhr ) {
                         $('#nestable2').nestable({
                             group: 1,
-                            maxDepth: 3,
+                            maxDepth: 2,
                         });
                     });
                 });

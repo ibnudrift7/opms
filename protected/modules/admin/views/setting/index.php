@@ -102,7 +102,6 @@ $this->pageHeader=array(
 								<i class="icon-cms fa fa-comment"></i>
                                 <span class="shortcuts-label">Integrasi PureChat</span>
 		                </a></li>
-		                */ ?>
 		                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/defaultMetaPage/index')); ?>">
 								<i class="icon-cms fa fa-key"></i>
                                 <span class="shortcuts-label">Default Meta Page</span>
@@ -115,12 +114,13 @@ $this->pageHeader=array(
 								<i class="icon-cms fa fa-image"></i>
                                 <span class="shortcuts-label">Slide</span>
 		                </a></li>
+		                */ ?>
                     </ul>
 		
 		<div class="clear" style="clear: both;"></div>
 		<div class="divider10"></div>
 	</div>
 	<div class="span4">
-		<?php $this->renderPartial('/setting/page_menu') ?>
+		<?php // $this->renderPartial('/setting/page_menu') ?>
 	</div>
 </div>

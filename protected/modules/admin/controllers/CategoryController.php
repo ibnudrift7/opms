@@ -339,7 +339,7 @@ class CategoryController extends ControllerAdmin
 				$transaction=$categoryModel->dbConnection->beginTransaction();
 				try
 				{
-					$categoryModel->type = 'category';
+					$categoryModel->type = 'reportcat';
 					$categoryModel->save();
 
 					PrdCategoryDescription::model()->deleteAll('category_id = :id', array(':id'=>$categoryModel->id));
@@ -367,7 +367,7 @@ class CategoryController extends ControllerAdmin
 				array(
 					'criteria'=>'type = :type',
 					'params'=>array(
-						':type'=>'category',
+						':type'=>'reportcat',
 					)
 				)
 			),

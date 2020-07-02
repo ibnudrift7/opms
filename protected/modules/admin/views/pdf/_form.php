@@ -23,22 +23,11 @@
 			<?php echo $form->textFieldRow($model,'sort',array('class'=>'span12')); ?>
 		</div>
 	</div>
-	<div class="row-fluid">
-		<div class="span6">
-			<?php echo $form->fileFieldRow($model,'file',array(
-			'hint'=>'<b>Note:</b> Ukuran tidak boleh melebihi 4MB', 'style'=>"width: 100%")); ?>
-			<?php if ($model->scenario == 'update'): ?>
-			<a href="<?php echo Yii::app()->baseUrl ?>/images/pdf/<?php echo $model->file ?>">Lihat file di sini</a>
-			<?php endif; ?>
-		</div>
-		<div class="span6">
-			<?php echo $form->fileFieldRow($model,'image',array(
-			'hint'=>'<b>Note:</b> Ukuran gambar 233 x 295px', 'style'=>"width: 100%")); ?>
-			<?php if ($model->scenario == 'update'): ?>
-			<img style="width: 100%;" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(735,465, '/images/pdf/'.$model->image , array('method' => 'resize', 'quality' => '90')) ?>"/>
-			<?php endif; ?>
-		</div>
-	</div>
+		<?php echo $form->fileFieldRow($model,'file',array(
+		'hint'=>'<b>Note:</b> Ukuran tidak boleh melebihi 4MB', 'style'=>"width: 100%")); ?>
+		<?php if ($model->scenario == 'update'): ?>
+		<a href="<?php echo Yii::app()->baseUrl ?>/images/pdf/<?php echo $model->file ?>">Lihat file di sini</a>
+		<?php endif; ?>
 	<br>
 	<?php $this->widget('bootstrap.widgets.TbButton', array(
 		'buttonType'=>'submit',
@@ -48,7 +37,7 @@
 	<?php $this->widget('bootstrap.widgets.TbButton', array(
 		// 'buttonType'=>'submit',
 		// 'type'=>'info',
-		'url'=>CHtml::normalizeUrl(array('index')),
+		'url'=>CHtml::normalizeUrl(array('index', 'category'=>$_GET['category'])),
 		'label'=>'Batal',
 	)); ?>
 		
@@ -63,6 +52,6 @@
 <?php $this->endWidget(); ?>
 </div>
 	<div class="span4">
-		<?php $this->renderPartial('/setting/page_menu') ?>
+		<?php // $this->renderPartial('/setting/page_menu') ?>
 	</div>
 </div>

@@ -48,8 +48,8 @@ class Pdf extends CActiveRecord
 
 			array('file', 'file', 'types'=>'pdf', 'allowEmpty'=>FALSE, 'on'=>'insert'),
 			array('file', 'file', 'types'=>'pdf', 'allowEmpty'=>TRUE, 'on'=>'update'),
-			array('image', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>FALSE, 'on'=>'insert', 'except'=>array('createTemp', 'copy')),
-			array('image', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>TRUE, 'on'=>'update', 'except'=>array('createTemp', 'copy')),
+			// array('image', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>FALSE, 'on'=>'insert', 'except'=>array('createTemp', 'copy')),
+			// array('image', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>TRUE, 'on'=>'update', 'except'=>array('createTemp', 'copy')),
 
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
