@@ -323,6 +323,20 @@ $this->pageHeader = array(
 							</div>
 						<?php endforeach ?>
 					</div>
+					<div class="span6">
+						<?php $type = 'about4_image' ?>
+						<?php Common::createSetting($type, 'Image', 'image', 'n') ?>
+						<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
+						<?php echo CHtml::fileField('Setting[' . $model[$type]['data']->name . ']', $model[$type]['data']->value, array('class' => 'span12')) ?>
+						<p class="help-block">NOTE: Picture landscape with min size 2000 x 1321 px, Larger image will be automatically cropped.</p>
+						<?php if ($model[$type]['data']->value) : ?>
+							<div style="">
+								<img style="height: auto; max-width: 300px;" src="<?php echo Yii::app()->baseUrl; ?>/images/static/<?php echo $model[$type]['data']->value; ?>" alt="">
+							</div>
+							<div class="clearfix" style="height: 15px;"></div>
+							<div class="clearfix" style="height: 1px;"></div>
+						<?php endif ?>
+					</div>
 				</div>
 
 

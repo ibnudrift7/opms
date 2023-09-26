@@ -1,4 +1,4 @@
-<section class="cover-insides hubungi" style="background-image: url(<?php echo Yii::app()->baseUrl . ImageHelper::thumb(1920, 539, '/images/static/' . $this->setting['contact_hero_image'], array('method' => 'adaptiveResize', 'quality' => '90')) ?>) !important;">
+<section class="cover-insides hubungi" style="background-image: url(<?php echo Yii::app()->baseUrl . ImageHelper::thumb(1920, 539, '/images/static/' . $this->setting['contact_hero_image'], array('method' => 'adaptiveResize', 'quality' => '90')) ?>) !important; background-size: cover !important;">
     <div class="begrond">
         <div class="prelative container">
             <div class="teks">
@@ -41,7 +41,7 @@
                         </tr>
                         <tr>
                             <td>Email</td>
-                            <td><a href="mailto:<?php echo $this->setting['asdfasdf'] ?>"><?php echo $this->setting['asdfasdf'] ?></a></td>
+                            <td><a href="mailto:<?php echo $this->setting['contact_email'] ?>"><?php echo $this->setting['contact_email'] ?></a></td>
                         </tr>
                         <tr>
                             <td>Whatsapp Hotline</td>

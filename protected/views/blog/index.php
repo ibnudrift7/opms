@@ -41,7 +41,7 @@
         <div class="inners_right">
           <div class="row tops_block no-gutters">
             <div class="col-md-40">
-              <h3 class="titles_top"><?php echo 'NEWS' ?></h3>
+              <h3 class="titles_top"><?php echo (isset($_GET['topik']) && $_GET['topik'] != '') ? strtoupper($_GET['topik']) : 'NEWS' ?></h3>
             </div>
             <div class="col-md-20">
               <div class="bcl_back text-right"><a class="btn btn-link" onclick="window.history.back();" href="#">Back</a></div>

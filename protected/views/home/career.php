@@ -1,4 +1,4 @@
-<section class="cover-insides karir" style="background-image: url(<?php echo Yii::app()->baseUrl . ImageHelper::thumb(1920, 539, '/images/static/' . $this->setting['career_hero_image'], array('method' => 'adaptiveResize', 'quality' => '90')) ?>) !important;">
+<section class="cover-insides karir" style="background-image: url(<?php echo Yii::app()->baseUrl . ImageHelper::thumb(1920, 539, '/images/static/' . $this->setting['career_hero_image'], array('method' => 'adaptiveResize', 'quality' => '90')) ?>) !important; background-size: cover !important;">
     <div class="begrond">
         <div class="prelative container">
             <div class="teks">

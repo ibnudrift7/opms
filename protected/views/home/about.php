@@ -1,4 +1,4 @@
-<section class="cover-insides" style="background-image: url(<?php echo Yii::app()->baseUrl . ImageHelper::thumb(1920, 539, '/images/static/' . $this->setting['about_hero_image'], array('method' => 'adaptiveResize', 'quality' => '90')) ?>) !important;">
+<section class="cover-insides" style="background-image: url(<?php echo Yii::app()->baseUrl . ImageHelper::thumb(1920, 539, '/images/static/' . $this->setting['about_hero_image'], array('method' => 'adaptiveResize', 'quality' => '90')) ?>) !important; background-size: cover !important;">
     <div class="begrond">
         <div class="prelative container">
             <div class="teks">
@@ -119,7 +119,9 @@
                 </div>
             </div>
             <div class="col-md-45">
-                <div class="fulls_banner"><img src="<?php echo $this->assetBaseurl; ?>_OPS2429-edit.jpg" alt="" class="img img-fluid"></div>
+                <div class="fulls_banner">
+                    <img class="img img-fluid" src="<?php echo Yii::app()->baseUrl . ImageHelper::thumb(2000, 1321, '/images/static/' . $this->setting['about4_image'], array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="">
+                </div>
             </div>
         </div>
 
