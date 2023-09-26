@@ -19,7 +19,7 @@ $active_menu_pg = $controllers_ac . '/' . $e_activemenu;
           <div class="d-inline-block mx-2 calls_info align-middle">
             PT. OPTIMA PRIMA METAL SINERGI HOTLINE
             <img src="<?php echo $this->assetBaseurl; ?>wa-atas.png" alt="" class="d-inline px-2 img img-fluid">
-            <a href="https://wa.me/6282333112268"><b>0823 3311 2268</b></a>
+            <a href="<?= $this->nomer_wa_link ?>"><b><?= $this->nomer_wa ?></b></a>
           </div>
           <div class="separate_line_white d-inline-block align-middle"></div>
           <div class="languages d-inline-block align-middle">
