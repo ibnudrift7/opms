@@ -17,7 +17,7 @@
                 <div class="box-content">
                     <div class="image"><img src="<?php echo $this->assetBaseurl; ?>1.png" alt=""></div>
                     <?php if (Yii::app()->language == 'en'): ?>
-                    <div class="title">
+                    <div class="title"></div>
                         <p>Honest & Competitive Appraisal</p>
                     </div>
                     <div class="subtitle">
