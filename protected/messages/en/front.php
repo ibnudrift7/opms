@@ -11,7 +11,7 @@ return array(
     'Home' => 'Home',
     'Tentang Kami' => 'About',
     'layanan' => 'Services',
-    'hubungan investor' => 'Investors',
+    // 'hubungan investor' => 'Investors',
     'karir' => 'Career',
     'Hubungi Kami' => 'Contact',
     'Lihat Lebih Lanjut' => 'See more',
@@ -30,4 +30,5 @@ return array(
     'Telepon' => 'Phone',
     'Email' => 'Email',
     'Pesan' => 'Message',
+    'News & Articles' => 'News & Articles',
 );

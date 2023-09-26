@@ -30,4 +30,5 @@ return array(
     'Telepon' => 'Telepon',
     'Email' => 'Email',
     'Pesan' => 'Pesan',
+    'News & Articles' => 'Blog & Artikel',
 );

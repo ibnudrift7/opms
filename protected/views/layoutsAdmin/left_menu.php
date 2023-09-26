@@ -17,8 +17,20 @@
             </ul>
         </li>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/about')); ?>"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'About') ?></a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/service')); ?>"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Services') ?></a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/career')); ?>"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Career') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/services')); ?>"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Services') ?></a></li>
+
+        <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Career') ?></a>
+            <ul>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/careerList/index')); ?>">Data Career</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/career')); ?>">Static Career</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'BLog') ?></a>
+            <ul>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/blog/index')); ?>">List Blog</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/blog')); ?>">Static Blog</a></li>
+            </ul>
+        </li>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/contact')); ?>"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Contact Us') ?></a></li>
 
         <li>&nbsp;</li>

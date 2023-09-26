@@ -2,7 +2,6 @@
     <div class="prelative container">
         <div class="row">
             <div class="col-md-60">
-                <?php if (Yii::app()->language == 'en'): ?>
                 <div class="judul">
                     <p>Why trust PT. OPMS</p>
                 </div>
@@ -13,17 +12,6 @@
                 <div class="subjudul">
                     <p>our superiority</p>
                 </div>    
-                <?php else: ?>
-                <div class="judul">
-                    <p>Mengapa PT. OPMS Dapat Anda Percaya</p>
-                </div>
-                <div class="caption text-center">
-                    <p>Untuk Kebutuhan Jual / Beli Besi Bekas & Kapal Bekas Anda?</p>
-                </div>
-                <div class="subjudul">
-                    <p>keunggulan kami</p>
-                </div>                    
-                <?php endif ?>
             </div>
             <div class="col-md-20">
                 <div class="box-content">
