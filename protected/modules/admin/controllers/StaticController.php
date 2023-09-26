@@ -67,6 +67,30 @@ class StaticController extends ControllerAdmin
 		));
 	}
 
+
+	public function actionBlog()
+	{
+		$model = Setting::model()->getModelSetting('data');
+
+		$model = $this->loadData($model);
+
+		$this->render('blog', array(
+			'model' => $model,
+		));
+	}
+
+
+	public function actionInvest()
+	{
+		$model = Setting::model()->getModelSetting('data');
+
+		$model = $this->loadData($model);
+
+		$this->render('invest', array(
+			'model' => $model,
+		));
+	}
+
 	public function loadData($model = '')
 	{
 		if (isset($_POST['Setting'])) {

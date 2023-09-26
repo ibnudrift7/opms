@@ -31,29 +31,39 @@ class BlogController extends Controller
 		$criteria->params[':language_id'] = $this->languageID;
 		$criteria->order = 'date_input DESC';
 
-		$dataFeatured = new CActiveDataProvider('Blog', array(
-			'criteria'=>$criteria,
-		    'pagination'=>array(
-		        'pageSize'=>2,
-		    ),
-		));
-		$arrayFeatured = array();
-		foreach ($dataFeatured->getData() as $key => $value) {
-			$arrayFeatured[] = $value->id;
+		// $dataFeatured = new CActiveDataProvider('Blog', array(
+		// 	'criteria' => $criteria,
+		// 	'pagination' => array(
+		// 		'pageSize' => 2,
+		// 	),
+		// ));
+		// $arrayFeatured = array();
+		// foreach ($dataFeatured->getData() as $key => $value) {
+		// 	$arrayFeatured[] = $value->id;
+		// }
+		// $criteria->addNotInCondition('t.id', $arrayFeatured);
+
+		if (isset($_GET['topik'])) {
+			switch ($_GET['topik']) {
+				case 'news':
+					$criteria->addCondition('t.topik_id = 2');
+					break;
+				case 'articles':
+					$criteria->addCondition('t.topik_id = 1');
+					break;
+			}
 		}
-		$criteria->addNotInCondition('t.id', $arrayFeatured);
 		$dataBlog = new CActiveDataProvider('Blog', array(
-			'criteria'=>$criteria,
-		    'pagination'=>array(
-		        'pageSize'=>6,
-		    ),
+			'criteria' => $criteria,
+			'pagination' => array(
+				'pageSize' => 9,
+			),
 		));
 
-		$this->layout='//layouts/column2';
-		$this->pageTitle = 'News & Articles - '.$this->pageTitle;
+		$this->layout = '//layouts/column2';
+		$this->pageTitle = 'News & Articles - ' . $this->pageTitle;
 		$this->render('index', array(
-			'dataBlog'=>$dataBlog,
-			'dataFeatured'=>$dataFeatured,
+			'dataBlog' => $dataBlog,
 		));
 	}
 	public function actionDetail($id)
@@ -67,24 +77,24 @@ class BlogController extends Controller
 		$criteria->params[':id'] = $id;
 		$criteria->order = 'date_input DESC';
 		$dataBlog = Blog::model()->find($criteria);
-		if($dataBlog===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+		if ($dataBlog === null)
+			throw new CHttpException(404, 'The requested page does not exist.');
 
 		$criteria = new CDbCriteria;
 		$criteria->order = 'RAND()';
 		$criteria->addCondition('id != :id');
 		$criteria->params[':id'] = $dataBlog->id;
 		$dataBlogs = new CActiveDataProvider('Blog', array(
-			'criteria'=>$criteria,
-		    'pagination'=>array(
-		        'pageSize'=>10,
-		    ),
+			'criteria' => $criteria,
+			'pagination' => array(
+				'pageSize' => 10,
+			),
 		));
 
-		$this->pageTitle = $dataBlog->description->title . ' - News & Articles - '.$this->pageTitle;
-		$this->layout='//layouts/column2';
+		$this->pageTitle = $dataBlog->description->title . ' - News & Articles - ' . $this->pageTitle;
+		$this->layout = '//layouts/column2';
 		$this->render('detail', array(
-			'dataBlog' => $dataBlog,
+			'data' => $dataBlog,
 			'dataBlogs' => $dataBlogs,
 			// 'menu'=>$menu,
 			// 'data'=> $konten,
@@ -98,38 +108,37 @@ class BlogController extends Controller
 	public function actionList()
 	{
 
-		$this->layout='//layouts/home';
+		$this->layout = '//layouts/home';
 
 		// convert to list item menu
 		$categoryName = Product::model()->getCategoryName();
 
 		$konten = Blog::model()->getAllData(10, false, $this->languageID);
 
-		$this->pageTitle = $konten['pageTitle'].' - ' . $this->pageTitle;
+		$this->pageTitle = $konten['pageTitle'] . ' - ' . $this->pageTitle;
 		if ($_GET['topik'] == 'topik-panduan-pemula') {
-		$this->render('panduan', array(
-			'categoryName'=>$categoryName,
-			'data'=> $konten,
-		));
-		}elseif($_GET['topik'] == 'topik-workout-list'){
-		$this->render('workout', array(
-			'categoryName'=>$categoryName,
-			'data'=> $konten,
-		));
-		}else{
-		$this->render('list', array(
-			'categoryName'=>$categoryName,
-			'data'=> $konten,
-		));
+			$this->render('panduan', array(
+				'categoryName' => $categoryName,
+				'data' => $konten,
+			));
+		} elseif ($_GET['topik'] == 'topik-workout-list') {
+			$this->render('workout', array(
+				'categoryName' => $categoryName,
+				'data' => $konten,
+			));
+		} else {
+			$this->render('list', array(
+				'categoryName' => $categoryName,
+				'data' => $konten,
+			));
 		}
 	}
 	public function actionCalculator()
 	{
 
-		$this->layout='//layouts/home';
+		$this->layout = '//layouts/home';
 		$this->pageTitle = 'Fitness Calculator | ' . $this->pageTitle;
-		$this->render('calculator', array(
-		));
+		$this->render('calculator', array());
 	}
 	public function actionCalc($type)
 	{
@@ -137,32 +146,31 @@ class BlogController extends Controller
 			case 'bmi':
 				$tampilan = 'calc-bmi';
 				break;
-			
+
 			case 'bmr':
 				$tampilan = 'calc-bmr';
 				break;
-			
+
 			case 'kalori':
 				$tampilan = 'calc-kalori';
 				break;
-			
+
 			case 'minum':
 				$tampilan = 'calc-minum';
 				break;
-			
+
 			case 'nutrisi':
 				$tampilan = 'calc-nutrisi';
 				break;
-			
+
 			default:
 				$tampilan = 'calc-bmi';
 				break;
 		}
 
-		$this->layout='//layoutsAdmin/mainKosong';
+		$this->layout = '//layoutsAdmin/mainKosong';
 		$this->pageTitle = 'Fitness Calculator | ' . $this->pageTitle;
-		$this->render($tampilan, array(
-		));
+		$this->render($tampilan, array());
 	}
 
 	// public function actionPanduan()

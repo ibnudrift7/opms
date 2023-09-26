@@ -3,76 +3,30 @@
         <div class="row">
             <div class="col-md-60">
                 <div class="judul">
-                    <p>Why trust PT. OPMS</p>
+                    <p><?php echo $this->setting['home1_small_title'] ?></p>
                 </div>
                 <div class="caption text-center">
-                    <!-- <p>For Selling / Buying Needs of Used & Used Iron?</p> -->
-                    <p>For Selling / Buying Metal Scraps</p>
+                    <p><?php echo $this->setting['home1_subtitle'] ?></p>
                 </div>
                 <div class="subjudul">
-                    <p>our superiority</p>
-                </div>    
-            </div>
-            <div class="col-md-20">
-                <div class="box-content">
-                    <div class="image"><img src="<?php echo $this->assetBaseurl; ?>1.png" alt=""></div>
-                    <?php if (Yii::app()->language == 'en'): ?>
-                    <div class="title"></div>
-                        <p>Honest & Competitive Appraisal</p>
-                    </div>
-                    <div class="subtitle">
-                        <p>Our standard of assessment of used iron products and used vessels to be sold / purchased is based on the standard price standards at that time, which can be accounted for in real terms.</p>
-                    </div>    
-                    <?php else: ?>
-                    <div class="title">
-                        <p>Apraisal Yang Jujur & Kompetitif</p>
-                    </div>
-                    <div class="subtitle">
-                        <p>Standar penilaian kami terhadap produk besi bekas maupun kapal bekas yang akan dijual / dibeli adalah berdasar patokan standar harga pada saat itu, yang dapat dipertanggung jawabkan secara nyata.</p>
-                    </div>                        
-                    <?php endif ?>
+                    <p><?php echo $this->setting['home1_small_title2'] ?></p>
                 </div>
             </div>
-            <div class="col-md-20">
-                <div class="box-content">
-                    <div class="image"><img src="<?php echo $this->assetBaseurl; ?>2.png" alt=""></div>
-                    <?php if (Yii::app()->language == 'en'): ?>
-                    <div class="title">
-                        <p>Extensive Experience & Network</p>
+            <?php for ($i = 1; $i < 4; $i++) {  ?>
+                <div class="col-md-20">
+                    <div class="box-content">
+                        <div class="image">
+                            <img class="img img-fluid" src="<?php echo Yii::app()->baseUrl . '/images/static/' . $this->setting['home1_items_icon_' . $i] ?>" alt="">
+                        </div>
+                        <div class="title">
+                            <p><?php echo $this->setting['home1_items_title_' . $i] ?></p>
+                        </div>
+                        <div class="subtitle">
+                            <p><?php echo $this->setting['home1_items_desc_' . $i] ?></p>
+                        </div>
                     </div>
-                    <div class="subtitle">
-                        <p>PT. OPMS has a combined experience in assessing and providing quality raw material supplies, preventing you from fraud and loss. An extensive network will guarantee a sustainable and safe supply.</p>
-                    </div>
-                    <?php else: ?>
-                    <div class="title">
-                        <p>Pengalaman & Jaringan Yang Luas</p>
-                    </div>
-                    <div class="subtitle">
-                        <p>PT. OPMS memiliki pengalaman gabungan dalam menilai maupun menyediakan pasokan bahan baku berkualitas, menghindarkan anda dari penipuan dan kerugian. Jaringan yang luas akan memberikan jaminan pasokan yang berkesinambungan dan aman.</p>
-                    </div>
-                    <?php endif ?>
                 </div>
-            </div>
-            <div class="col-md-20">
-                <div class="box-content">
-                    <div class="image"><img src="<?php echo $this->assetBaseurl; ?>3.png" alt=""></div>
-                    <?php if (Yii::app()->language == 'en'): ?>
-                    <div class="title">
-                        <p>Reliability of the Logistics Team</p>
-                    </div>
-                    <div class="subtitle">
-                        <p>Wherever you are and for your used iron and used vessels, we will be able to serve you with a logistics team that can handle shipments and pick-up with an efficient and clever strategy.</p>
-                    </div>
-                    <?php else: ?>
-                    <div class="title">
-                        <p>Kehandalan Tim Logistik</p>
-                    </div>
-                    <div class="subtitle">
-                        <p>Di manapun anda berada dan untuk kebutuhan besi bekas maupun kapal bekas anda, kami akan mampu melayani anda dengan tim logistik yang dapat mengatasi kiriman maupun penjemputan dengan strategi yang efisien dan cerdik.</p>
-                    </div>
-                    <?php endif ?>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
 </section>
@@ -80,86 +34,31 @@
     <div class="prelative container">
         <div class="row">
             <div class="col-md-60">
-                <?php if (Yii::app()->language == 'en'): ?>
                 <div class="judul">
-                    <p>Iron Sale & Purchase Services & Our Used Ships</p>
+                    <p><?php echo $this->setting['home2_small_title'] ?></p>
                 </div>
                 <div class="caption">
-                    <p>For customers who need quality scrap iron from a trusted source, PT. OPMS is here to provide the best raw materials for you.</p>
+                    <p><?php echo $this->setting['home2_subtitle'] ?></p>
                 </div>
                 <div class="subjudul">
-                    <p>VARIOUS DIVERSION OF USED IRON RAW MATERIALS:</p>
-                </div>
-                <?php else: ?>
-                <div class="judul">
-                    <p>Layanan Jual / Beli Besi & Kapal Bekas Kami</p>
-                </div>
-                <div class="caption">
-                    <p>Bagi Pelanggan yang membutuhkan besi bekas berkualitas dari sumber terpercaya, PT. OPMS hadir untuk menyediakan bahan baku terbaik untuk Anda.</p>
-                </div>
-                <div class="subjudul">
-                    <p>ANEKA RAGAM BAHAN BAKU BESI BEKAS DIANTARANYA:</p>
-                </div>
-                <?php endif ?>
-            </div>
-            <div class="col-md-12 col-30">
-                <div class="box-content">
-                    <div class="image"><img src="<?php echo $this->assetBaseurl; ?>img1.png" alt=""></div>
-                    <div class="title">
-                        <p>Tembaga</p>
-                    </div>
-                    <div class="subtitle">
-                        <p>Copper</p>
-                    </div>
+                    <p><?php echo $this->setting['home2_small_title2'] ?></p>
                 </div>
             </div>
-            <div class="col-md-12 col-30">
-                <div class="box-content">
-                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>img2.png" alt=""></div>
-                    <div class="title">
-                        <p>Brass</p>
-                    </div>
-                    <div class="subtitle">
-                        <p>Kuningan</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-30">
-                <div class="box-content">
-                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>img3.png" alt=""></div>
-                    <div class="title">
-                        <p>Cast Iron</p>
-                    </div>
-                    <div class="subtitle">
-                        <p>Besi Cor</p>
+            <?php for ($i = 1; $i < 6; $i++) {  ?>
+                <div class="col-md-12 col-30">
+                    <div class="box-content">
+                        <div class="image"><img src="<?php echo Yii::app()->baseUrl . ImageHelper::thumb(144, 144, '/images/static/' . $this->setting['home2_items_icon_' . $i], array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt=""></div>
+                        <div class="title">
+                            <p><?php echo $this->setting['home2_items_title_' . $i] ?></p>
+                        </div>
+                        <div class="subtitle">
+                            <p><?php echo $this->setting['home2_items_info_' . $i] ?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-12 col-30">
-                <div class="box-content">
-                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>img4.png" alt=""></div>
-                    <div class="title">
-                        <p>Iron Scrap</p>
-                    </div>
-                    <div class="subtitle">
-                        <p>Besi Bekas</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-30">
-                <div class="box-content">
-                <div class="image"><img src="<?php echo $this->assetBaseurl; ?>img5.png" alt=""></div>
-                    <div class="title">
-                        <p>Ship Spareparts</p>
-                    </div>
-                    <div class="subtitle">
-                        <p>Sparepart Kapal</p>
-                    </div>
-                </div>
-
-            </div>
+            <?php } ?>
             <div class="button">
-            <button class="form-control button-red"><a href="<?php echo CHtml::normalizeUrl(array('/home/layanan', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'PELAJARI LEBIH LANJUT') ?></a></button>
+                <button class="form-control button-red"><a href="<?php echo CHtml::normalizeUrl(array('/home/layanan', 'lang' => Yii::app()->language)); ?>"><?php echo Tt::t('front', 'PELAJARI LEBIH LANJUT') ?></a></button>
 
             </div>
 
@@ -171,20 +70,16 @@
 
 <section class="home-sec-4">
     <div class="prelative container">
-            <div class="image"><img src="<?php echo $this->assetBaseurl; ?>opms-logo.png" alt=""></div>
-            <p class="subtitle">
-            <?php if (Yii::app()->language == 'en'): ?>
-            Your trusted partner to sell & buy quality scrap iron.    
-            <?php else: ?>
-            Rekan terpercaya Anda untuk jual & beli besi bekas berkualitas.
-            <?php endif ?>
-            </p>
-            <p class="surabaya">SURABAYA</p>
-            <div class="info">
-                <p>Jl Margomulyo Permai Blok AC no 10, Surabaya.</p>
-                <p><?php echo Tt::t('front', 'Telp') ?>. (031) 7495673  Fax. (031) 7490073</p>
-                <p><b>Whatsapp Hotline. <a href="http://wa.me/6282333112268">0823 3311 2268</a></b></p>
-                <p>Email. <a href="mailto:marketing@opms.co.id">marketing@opms.co.id</a></p>
+        <div class="image"><img src="<?php echo $this->assetBaseurl; ?>opms-logo.png" alt=""></div>
+        <p class="subtitle">
+            Your trusted partner to sell & buy quality scrap iron.
+        </p>
+        <p class="surabaya">SURABAYA</p>
+        <div class="info">
+            <p>Jl Margomulyo Permai Blok AC no 10, Surabaya.</p>
+            <p><?php echo Tt::t('front', 'Telp') ?>. (031) 7495673 Fax. (031) 7490073</p>
+            <p><b>Whatsapp Hotline. <a href="http://wa.me/6282333112268">0823 3311 2268</a></b></p>
+            <p>Email. <a href="mailto:marketing@opms.co.id">marketing@opms.co.id</a></p>
         </div>
     </div>
 </section>

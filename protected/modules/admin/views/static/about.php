@@ -88,7 +88,6 @@ $this->pageHeader = array(
 					</div>
 				<?php endforeach ?>
 
-
 				<div class="divider10"></div>
 				<?php $this->widget('bootstrap.widgets.TbButton', array(
 					'buttonType' => 'submit',

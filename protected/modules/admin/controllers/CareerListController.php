@@ -6,7 +6,7 @@ class CareerListController extends ControllerAdmin
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layoutsAdmin/column2';
+	public $layout = '//layoutsAdmin/column2';
 
 	/**
 	 * @return array action filters
@@ -27,13 +27,15 @@ class CareerListController extends ControllerAdmin
 	public function accessRules()
 	{
 		return array(
-			(!Yii::app()->user->isGuest)?
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('delete','index','view','create','update'),
-				'users'=>array(Yii::app()->user->name),
-			):array(),
-			array('deny',  // deny all users
-				'users'=>array('*'),
+			(!Yii::app()->user->isGuest) ?
+				array(
+					'allow', // allow admin user to perform 'admin' and 'delete' actions
+					'actions' => array('delete', 'index', 'view', 'create', 'update'),
+					'users' => array(Yii::app()->user->name),
+				) : array(),
+			array(
+				'deny',  // deny all users
+				'users' => array('*'),
 			),
 		);
 	}
@@ -44,33 +46,29 @@ class CareerListController extends ControllerAdmin
 	 */
 	public function actionCreate()
 	{
-		$model=new CareerList;
+		$model = new CareerList;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['CareerList']))
-		{
-			$model->attributes=$_POST['CareerList'];
-			if($model->validate()){
-				$transaction=$model->dbConnection->beginTransaction();
-				try
-				{
+		if (isset($_POST['CareerList'])) {
+			$model->attributes = $_POST['CareerList'];
+			if ($model->validate()) {
+				$transaction = $model->dbConnection->beginTransaction();
+				try {
 					$model->save();
 					Log::createLog("CareerListController Create $model->id");
-					Yii::app()->user->setFlash('success','Data has been inserted');
-				    $transaction->commit();
+					Yii::app()->user->setFlash('success', 'Data has been inserted');
+					$transaction->commit();
 					$this->redirect(array('index'));
-				}
-				catch(Exception $ce)
-				{
-				    $transaction->rollback();
+				} catch (Exception $ce) {
+					$transaction->rollback();
 				}
 			}
 		}
 
-		$this->render('create',array(
-			'model'=>$model,
+		$this->render('create', array(
+			'model' => $model,
 		));
 	}
 
@@ -81,33 +79,29 @@ class CareerListController extends ControllerAdmin
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		$model = $this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['CareerList']))
-		{
-			$model->attributes=$_POST['CareerList'];
-			if($model->validate()){
-				$transaction=$model->dbConnection->beginTransaction();
-				try
-				{
+		if (isset($_POST['CareerList'])) {
+			$model->attributes = $_POST['CareerList'];
+			if ($model->validate()) {
+				$transaction = $model->dbConnection->beginTransaction();
+				try {
 					$model->save();
 					Log::createLog("CareerListController Update $model->id");
-					Yii::app()->user->setFlash('success','Data Edited');
-				    $transaction->commit();
+					Yii::app()->user->setFlash('success', 'Data Edited');
+					$transaction->commit();
 					$this->redirect(array('index'));
-				}
-				catch(Exception $ce)
-				{
-				    $transaction->rollback();
+				} catch (Exception $ce) {
+					$transaction->rollback();
 				}
 			}
 		}
 
-		$this->render('update',array(
-			'model'=>$model,
+		$this->render('update', array(
+			'model' => $model,
 		));
 	}
 
@@ -118,17 +112,17 @@ class CareerListController extends ControllerAdmin
 	 */
 	public function actionDelete($id)
 	{
-		if(Yii::app()->request->isPostRequest)
-		{
-			// we only allow deletion via POST request
-			$this->loadModel($id)->delete();
+		// if(Yii::app()->request->isPostRequest)
+		// {
+		// we only allow deletion via POST request
+		$this->loadModel($id)->delete();
 
-			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-			if(!isset($_GET['ajax']))
-				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
-		}
-		else
-			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		// if(!isset($_GET['ajax']))
+		$this->redirect(array('index'));
+		// }
+		// else
+		// 	throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
 
 	/**
@@ -136,15 +130,15 @@ class CareerListController extends ControllerAdmin
 	 */
 	public function actionIndex()
 	{
-		$model=new CareerList('search');
+		$model = new CareerList('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['CareerList']))
-			$model->attributes=$_GET['CareerList'];
+		if (isset($_GET['CareerList']))
+			$model->attributes = $_GET['CareerList'];
 
-		$dataProvider=new CActiveDataProvider('CareerList');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-			'model'=>$model,
+		$dataProvider = new CActiveDataProvider('CareerList');
+		$this->render('index', array(
+			'dataProvider' => $dataProvider,
+			'model' => $model,
 		));
 	}
 
@@ -155,9 +149,9 @@ class CareerListController extends ControllerAdmin
 	 */
 	public function loadModel($id)
 	{
-		$model=CareerList::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+		$model = CareerList::model()->findByPk($id);
+		if ($model === null)
+			throw new CHttpException(404, 'The requested page does not exist.');
 		return $model;
 	}
 
@@ -167,8 +161,7 @@ class CareerListController extends ControllerAdmin
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='career-list-form')
-		{
+		if (isset($_POST['ajax']) && $_POST['ajax'] === 'career-list-form') {
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}

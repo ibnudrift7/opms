@@ -21,11 +21,9 @@
 		<?php echo $form->errorSummary($model); ?>
 		<?php echo $form->errorSummary($modelDesc, 'Please fix the following input errors:', 'Periksa di semua bahasa'); ?>
 		<?php if (Yii::app()->user->hasFlash('success')) : ?>
-
 			<?php $this->widget('bootstrap.widgets.TbAlert', array(
 				'alerts' => array('success'),
 			)); ?>
-
 		<?php endif; ?>
 
 		<?php Yii::import('ext.imperavi-redactor-widget.ImperaviRedactorWidget'); ?>
@@ -94,7 +92,14 @@
 		?>
 		<?php echo $form->textFieldRow($model, 'link', array('class' => 'form-control span6',)); ?>
 
-		<?php // echo $form->dropDownListRow($model, 'topik_id', $res_product , array('class'=>'form-control span6', 'empty'=>'-- Pilih Produk --')); 
+		<?php
+		$res_product = [
+			2 => 'News',
+			1 => 'Articles',
+		];
+		?>
+
+		<?php echo $form->dropDownListRow($model, 'topik_id', $res_product, array('class' => 'form-control span6', 'empty' => '-- Pilih --'));
 		?>
 
 

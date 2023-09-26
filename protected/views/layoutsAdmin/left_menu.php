@@ -38,6 +38,7 @@
 
         <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/admin/pdf/index')); ?>"><span class="fa fa-tag"></span> <?php echo Tt::t('admin', 'Investor Information') ?></a>
             <ul>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/invest')); ?>">Static Invest</a></li>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/reportcat/index', 'parent' => 1)); ?>">INVESTOR INFORMATION</a></li>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/reportcat/index', 'parent' => 2)); ?>">FINANCIAL INFORMATION</a></li>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/reportcat/index', 'parent' => 3)); ?>">CORPORATE GOVERNANCE</a></li>

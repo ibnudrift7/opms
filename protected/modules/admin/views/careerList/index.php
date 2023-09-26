@@ -34,9 +34,9 @@ $this->menu = array(
 		// 'id',
 		'position',
 		'location',
-		'job_description_en',
+		// 'job_description_en',
 		// 'job_description_id',
-		'qualifications_en',
+		// 'qualifications_en',
 		/*
 		'qualifications_id',
 		'status',
