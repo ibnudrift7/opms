@@ -74,7 +74,7 @@ $this->breadcrumbs = array(
                 <div class="alert alert-block">
                     <button data-dismiss="alert" class="close" type="button">&times;</button>
                     <p style="margin: 8px 0">Download User Guide</p>
-                    <p style="margin: 8px 0">Lihat User Guide <a href="<?php echo Yii::app()->baseUrl . '/images/user-guide.pdf' ?>">di sini</a> </p>
+                    <p style="margin: 8px 0">Lihat User Guide <a target="_blank" href="https://www.loom.com/share/b7d7bc70b1514520ad5fa5304aa657cb?sid=175b7d83-d6fc-4d7d-a5ae-0b9e52e4412a">di sini</a> </p>
                 </div>
                 <br />
 
