@@ -1,7 +1,10 @@
+<?php
+$id_user = \Yii::app()->user->id;
+$userAll = User::model()->findByAttributes(array('email' => $id_user));
+?>
 <div class="leftmenu">
     <ul class="nav nav-tabs nav-stacked">
         <li class="nav-header">Navigation</li>
-
         <!-- <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/admin/product/index')); ?>"><span class="fa fa-tag"></span> <?php echo Tt::t('admin', 'Products') ?></a>
             <ul>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/product/index')); ?>">View Products</a></li>
@@ -9,46 +12,54 @@
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/category/index')); ?>">Category</a></li>
             </ul>
         </li> -->
+        <?php if ($userAll->group_id == 1) { ?>
+            <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Blog') ?></a>
+                <ul>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/blog/index')); ?>">List Blog</a></li>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/blog')); ?>">Static Blog</a></li>
+                </ul>
+            </li>
+        <?php } else { ?>
 
-        <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Home') ?></a>
-            <ul>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/slide/index')); ?>">Slide</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/home')); ?>">Static Home</a></li>
-            </ul>
-        </li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/about')); ?>"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'About') ?></a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/services')); ?>"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Services') ?></a></li>
+            <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Home') ?></a>
+                <ul>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/slide/index')); ?>">Slide</a></li>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/home')); ?>">Static Home</a></li>
+                </ul>
+            </li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/about')); ?>"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'About') ?></a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/services')); ?>"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Services') ?></a></li>
 
-        <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Career') ?></a>
-            <ul>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/careerList/index')); ?>">Data Career</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/career')); ?>">Static Career</a></li>
-            </ul>
-        </li>
-        <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'BLog') ?></a>
-            <ul>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/blog/index')); ?>">List Blog</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/blog')); ?>">Static Blog</a></li>
-            </ul>
-        </li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/contact')); ?>"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Contact Us') ?></a></li>
+            <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Career') ?></a>
+                <ul>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/careerList/index')); ?>">Data Career</a></li>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/career')); ?>">Static Career</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Blog') ?></a>
+                <ul>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/blog/index')); ?>">List Blog</a></li>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/blog')); ?>">Static Blog</a></li>
+                </ul>
+            </li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/contact')); ?>"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Contact Us') ?></a></li>
 
-        <li>&nbsp;</li>
-        <!-- <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/category/index', 'type' => 'filtercat')); ?>"><span class="fa fa-fax"></span> <?php echo Tt::t('admin', 'Tipe Category Report') ?></a></li> -->
+            <li>&nbsp;</li>
+            <!-- <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/category/index', 'type' => 'filtercat')); ?>"><span class="fa fa-fax"></span> <?php echo Tt::t('admin', 'Tipe Category Report') ?></a></li> -->
 
-        <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/admin/pdf/index')); ?>"><span class="fa fa-tag"></span> <?php echo Tt::t('admin', 'Investor Information') ?></a>
-            <ul>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/invest')); ?>">Static Invest</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/reportcat/index', 'parent' => 1)); ?>">INVESTOR INFORMATION</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/reportcat/index', 'parent' => 2)); ?>">FINANCIAL INFORMATION</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/reportcat/index', 'parent' => 3)); ?>">CORPORATE GOVERNANCE</a></li>
-            </ul>
-        </li>
+            <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/admin/pdf/index')); ?>"><span class="fa fa-tag"></span> <?php echo Tt::t('admin', 'Investor Information') ?></a>
+                <ul>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/invest')); ?>">Static Invest</a></li>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/reportcat/index', 'parent' => 1)); ?>">INVESTOR INFORMATION</a></li>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/reportcat/index', 'parent' => 2)); ?>">FINANCIAL INFORMATION</a></li>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/reportcat/index', 'parent' => 3)); ?>">CORPORATE GOVERNANCE</a></li>
+                </ul>
+            </li>
 
-        <li>&nbsp;</li>
+            <li>&nbsp;</li>
 
 
-        <?php /*
+            <?php /*
         <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/contact')); ?>"><span class="fa fa-phone"></span> <?php echo Tt::t('admin', 'Contact Us') ?></a></li>
 
         <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/blog/index')); ?>"><span class="fa fa-book"></span> <?php echo Tt::t('admin', 'Tips/Artikel') ?></a></li>
@@ -93,11 +104,11 @@
 
         <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/address/index')); ?>"><span class="fa fa-group"></span> <?php echo Tt::t('admin', 'Lokasi Penjualan') ?></a></li>
         */ ?>
-        <!-- <li><a href="#"><span class="fa fa-bullhorn"></span> <?php echo Tt::t('admin', 'Promotions') ?></a></li> -->
-        <!-- <li><a href="#"><span class="fa fa-file-text-o"></span> <?php echo Tt::t('admin', 'Reports') ?></a></li> -->
-        <!-- class="dropdown" -->
-        <li><a href="<?php echo CHtml::normalizeUrl(array('setting/index')); ?>"><span class="fa fa-cogs"></span> <?php echo Tt::t('admin', 'General Setting') ?></a>
-            <!--  <ul>
+            <!-- <li><a href="#"><span class="fa fa-bullhorn"></span> <?php echo Tt::t('admin', 'Promotions') ?></a></li> -->
+            <!-- <li><a href="#"><span class="fa fa-file-text-o"></span> <?php echo Tt::t('admin', 'Reports') ?></a></li> -->
+            <!-- class="dropdown" -->
+            <li><a href="<?php echo CHtml::normalizeUrl(array('setting/index')); ?>"><span class="fa fa-cogs"></span> <?php echo Tt::t('admin', 'General Setting') ?></a>
+                <!--  <ul>
                 <li class="active"><a href="<?php echo CHtml::normalizeUrl(array('/admin/administrator/index')); ?>">Administrator Manager</a></li>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/language/index')); ?>">Language (Bahasa)</a></li>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/access_block/index')); ?>">Access Blok</a></li>
@@ -116,7 +127,8 @@
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/shipping/index')); ?>">Pengaturan Shipping</a></li>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/popOut/index')); ?>">Setting PopOut</a></li>
             </ul> -->
-        </li>
+            </li>
+        <?php } ?>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/home/logout')); ?>"><span class="fa fa fa-sign-out"></span> Logout</a></li>
     </ul>
 </div><!--leftmenu-->

@@ -2,8 +2,10 @@
 $this->breadcrumbs = array(
     'Dashboard',
 );
-?>
 
+$id_user = \Yii::app()->user->id;
+$userAll = User::model()->findByAttributes(array('email' => $id_user));
+?>
 <div class="pageheader">
 
     <div class="pageicon"><span class="fa fa-laptop"></span></div>
@@ -20,13 +22,21 @@ $this->breadcrumbs = array(
                 <h5 class="subtitle">Menu</h5>
 
                 <ul class="shortcuts">
-                    <li class="events">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/home')); ?>">
-                            <i class="icon-cms fa fa-home"></i>
-                            <span class="shortcuts-label">Home</span>
-                        </a>
-                    </li>
-                    <?php /*
+                    <?php if ($userAll->group_id == 1) { ?>
+                        <li class="events">
+                            <a href="<?php echo CHtml::normalizeUrl(array('/admin/blog/index')); ?>">
+                                <i class="icon-cms fa fa-bullhorn"></i>
+                                <span class="shortcuts-label">Blog</span>
+                            </a>
+                        </li>
+                    <?php } else { ?>
+                        <li class="events">
+                            <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/home')); ?>">
+                                <i class="icon-cms fa fa-home"></i>
+                                <span class="shortcuts-label">Home</span>
+                            </a>
+                        </li>
+                        <?php /*
                         <li class="products">
                             <a href="<?php echo CHtml::normalizeUrl(array('/admin/slide/index')); ?>">
                                 <i class="icon-cms fa fa-image"></i>
@@ -52,13 +62,13 @@ $this->breadcrumbs = array(
                             </a>
                         </li>
                         */ ?>
-                    <li class="archive">
-                        <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/contact')); ?>">
-                            <i class="icon-cms fa fa-phone"></i>
-                            <span class="shortcuts-label">Contact Us</span>
-                        </a>
-                    </li>
-
+                        <li class="archive">
+                            <a href="<?php echo CHtml::normalizeUrl(array('/admin/static/contact')); ?>">
+                                <i class="icon-cms fa fa-phone"></i>
+                                <span class="shortcuts-label">Contact Us</span>
+                            </a>
+                        </li>
+                    <?php } ?>
                 </ul>
 
 
